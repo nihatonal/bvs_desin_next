@@ -1,0 +1,141 @@
+"use client"
+
+import { useTranslations, useLocale } from "next-intl";
+import { useState } from "react";
+import { FooterLegalLinks } from "./FooterLegalLinks";
+import Logo from "./Logo";
+import ServiceModal from "./ServiceModal";
+import SocialMedia from "./SocialMedia";
+
+interface NavItem {
+    id: string;
+    label: string;
+}
+type Service = {
+    id: string;
+    title: string;
+};
+
+export default function Footer() {
+    const t = useTranslations("footer");
+    const nav = useTranslations("nav");
+    const ser = useTranslations("services")
+    const currentYear = new Date().getFullYear();
+    const locale = useLocale();
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState<string>("");
+
+    const navItems: NavItem[] = [
+        { id: "home", label: nav("home") },
+        { id: "about", label: nav("about") },
+        { id: "services", label: nav("services") },
+        { id: "portfolio", label: nav("portfolio") },
+        { id: "pricing", label: nav("pricing") },
+    ];
+
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop, // Header yüksekliğini hesaba kat
+                behavior: "smooth",
+            });
+        }
+    };
+
+    const services: Service[] = [
+        {
+            id: "webDev",
+            title: ser("webDev")
+        },
+        {
+            id: "ecommerce",
+            title: ser("ecommerce")
+        },
+        {
+            id: "uiDesign",
+            title: ser("uiDesign")
+        },
+        {
+            id: "seo",
+            title: ser("seo")
+        },
+        {
+            id: "maintenance",
+            title: ser("maintenance")
+        }
+    ];
+
+    const openServiceModal = (serviceId: string) => {
+        setSelectedService(serviceId);
+        setModalOpen(true);
+    };
+
+    return (
+        <footer className="bg-bvs-dark pt-16 pb-8 px-2 lg:px-20">
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-4 gap-10 mb-10">
+                    {/* Company Info */}
+                    <div>
+                        <div className="text-white text-2xl font-bold mb-4 flex items-center">
+                            <Logo className="text-bvs-lightPurple hover:text-bvs-lightPurple" spanDesign="text-white group-hover:text-bvs-lightPurple" />
+
+                        </div>
+                        <p className="text-gray-300 mb-4">{t("title")}</p>
+                        <SocialMedia iconClassName="text-white hover:bg-white/20 backdrop-blur p-2 rounded-full transition-all hover:scale-105 duration-200" />
+                    </div>
+
+                    {/* Quick Links */}
+                    <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">{t("links")}</h3>
+                        <div className="space-y-2 flex flex-col items-start">
+                            {navItems.map((item) => (
+                                <button
+                                    key={item.id}
+                                    aria-label="nav button"
+                                    onClick={() => scrollToSection(item.id)}
+                                    className="text-gray-300 hover:text-white transition-colors"
+                                >
+                                    {item.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Services */}
+                    <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">{t("services")}</h3>
+                        <ul className="space-y-2">
+                            {services.map((service) => (
+                                <li key={service.id}>  {/* key eklendi */}
+                                    <button
+                                        onClick={() => openServiceModal(service.id)}
+                                        className="text-gray-300 hover:text-white transition-colors"
+                                    >
+                                        {service.title}
+                                    </button>
+                                </li>
+                            ))}
+
+                        </ul>
+                    </div>
+
+                    {/* Legal */}
+                    <FooterLegalLinks />
+                </div>
+                <ServiceModal
+                    isOpen={modalOpen}
+                    onClose={() => setModalOpen(false)}
+                    service={selectedService}
+                    locale={locale} />
+
+                {/* Copyright */}
+                <div className="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                    <p>
+                        &copy; {currentYear} BVS Design. {t("rights")}
+                    </p>
+                </div>
+            </div>
+        </footer >
+    );
+}
