@@ -1,5 +1,6 @@
 "use client"
 
+import { usePathname, useRouter } from '@/node_modules/next/navigation';
 import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import { FooterLegalLinks } from "./FooterLegalLinks";
@@ -16,7 +17,29 @@ type Service = {
     title: string;
 };
 
+const smoothScrollTo = (targetY: number, duration = 600) => {
+    const startY = window.scrollY;
+    const distanceY = targetY - startY;
+    let startTime: number | null = null;
+
+    const step = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = 0.5 * (1 - Math.cos(Math.PI * progress));
+
+        window.scrollTo(0, startY + distanceY * ease);
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
 export default function Footer() {
+    const pathname = usePathname();
+    const router = useRouter();
     const t = useTranslations("footer");
     const nav = useTranslations("nav");
     const ser = useTranslations("services")
@@ -34,12 +57,17 @@ export default function Footer() {
     ];
 
     const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            window.scrollTo({
-                top: element.offsetTop, // Header yüksekliğini hesaba kat
-                behavior: "smooth",
-            });
+        const locale = pathname.split("/")[1]; // tr, en, ru gibi
+        const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
+
+        if (isHomePage) {
+            const section = document.getElementById(id);
+            if (section) {
+                smoothScrollTo(section.offsetTop, 800); // 800ms yumuşak scroll
+            }
+        } else {
+            router.push(`/${locale}`); // lokalize ana sayfaya yönlendir
+            sessionStorage.setItem("scrollTo", id);
         }
     };
 
