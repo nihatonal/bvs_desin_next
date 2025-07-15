@@ -128,7 +128,7 @@ export default function Portfolio() {
                                         {project.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="bg-bvs-lightPurple/10 text-bvs-purple px-3 py-1 rounded-full text-xs"
+                                                className="bg-bvs-lightPurple/20 hover:bg-bvs-lightPurple/30 transitions text-bvs-purple px-3 py-1 rounded-full text-xs font-medium"
                                             >
                                                 {tech}
                                             </span>
