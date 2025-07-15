@@ -42,7 +42,7 @@ export default function Hero(): JSX.Element {
                             {t("description")}
                         </p>
 
-                        <div className="grid grid-cols-2 lg:flex gap-4 pt-12">
+                        <div className="grid grid-cols-2 lg:flex gap-4 pt-6">
                             <button
                                 aria-label="portfolio button"
                                 onClick={() => scrollToSection("portfolio")}
@@ -53,7 +53,7 @@ export default function Hero(): JSX.Element {
                             <button
                                 aria-label="contact button"
                                 onClick={() => scrollToSection("contact")}
-                                className="flex items-center justify-center gap-2 btn-outline py-2 px-4 text-bvs-primary border border-1 border-bvs-primary/40 hover:bg-bvs-primary/40 hover:text-gray-600 rounded-[8px]"
+                                className="flex items-center justify-center gap-2 btn-outline py-2 px-4 text-bvs-primary border border-1 border-bvs-primary/80 hover:bg-bvs-primary/90 hover:text-white rounded-[8px]"
                             >
                                 {t("cta_2")}<MessageSquare className="w-4 h-4" />
                             </button>
@@ -92,7 +92,7 @@ export default function Hero(): JSX.Element {
                 </div>
 
                 {/* Scroll Indicator */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                <div className="absolute bottom-32 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
                     <div className="w-10 h-16 border-2 border-bvs-lightPurple rounded-full flex justify-center mb-1">
                         <div className="w-1 h-3 bg-bvs-lightPurple rounded-full mt-2 animate-scroll"></div>
                     </div>

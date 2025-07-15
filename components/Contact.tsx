@@ -232,7 +232,11 @@ const Contact: React.FC = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-gray-700">{t("emailLabel")}</h4>
-                                        <p className="text-gray-600">onalnihat1986@gmail.com</p>
+                                        <p className="text-gray-600">
+                                            <a href="mailto:onalnihat1986@gmail.com" className="hover:underline">
+                                                onalnihat1986@gmail.com
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
 
@@ -256,9 +260,14 @@ const Contact: React.FC = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-gray-700">{t("phoneLabel")}</h4>
-                                        <p className="text-gray-600">+7 909 931 66 70</p>
+                                        <p className="text-gray-600">
+                                            <a href="tel:+79099316670" className="hover:underline">
+                                                +7 909 931 66 70
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
+
 
                                 {/* Working Hours */}
                                 <div className="flex items-start">

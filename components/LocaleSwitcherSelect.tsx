@@ -96,7 +96,7 @@ export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
       >
         <SelectValue />
       </SelectTrigger>
-      <SelectContent className="bg-bvs-gray z-[9999]">
+      <SelectContent className="bg-bvs-purple/10 border border-1 border-purple z-[9999]">
         {locales.map((locale) => (
           <SelectItem key={locale} value={locale} className="cursor-pointer">
             {locale.toUpperCase()}

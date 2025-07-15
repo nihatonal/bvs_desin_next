@@ -2,11 +2,31 @@
 import React, { useState } from 'react';
 import { usePathname, useRouter } from '@/node_modules/next/navigation';
 import { useTranslations } from "next-intl";
+
+const smoothScrollTo = (targetY: number, duration = 600) => {
+    const startY = window.scrollY;
+    const distanceY = targetY - startY;
+    let startTime: number | null = null;
+
+    const step = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = 0.5 * (1 - Math.cos(Math.PI * progress));
+
+        window.scrollTo(0, startY + distanceY * ease);
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
 const HeaderMenu = () => {
     const pathname = usePathname();
     const router = useRouter();
     const t = useTranslations("nav");
-    // const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [selectedSection, setSelectedSection] = useState("home")
 
 
@@ -19,29 +39,22 @@ const HeaderMenu = () => {
         { id: "contact", label: t("contact") },
     ];
 
+
     const handleMenuClick = (id: string) => {
         const locale = pathname.split("/")[1]; // tr, en, ru gibi
         const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
-        setSelectedSection(id)
+        setSelectedSection(id);
+
         if (isHomePage) {
             const section = document.getElementById(id);
-
             if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
+                smoothScrollTo(section.offsetTop, 800); // 800ms yumuşak scroll
             }
         } else {
             router.push(`/${locale}`); // lokalize ana sayfaya yönlendir
             sessionStorage.setItem("scrollTo", id);
         }
     };
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setIsScrolled(window.scrollY > 10);
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
 
     return (
         <div className="hidden md:inline-flex w-1/3 items-center justify-center gap-3 lg:gap-7 text-sm capitalize font-semibold text-gray-800/80">

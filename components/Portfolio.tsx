@@ -22,8 +22,8 @@ export default function Portfolio() {
         () => [
             { id: "all", name: t("all") },
             { id: "web-design", name: t("web-design") },
-            { id: "web-development", name: t("web-development") },
             { id: "ui-ux", name: t("ui-ux") },
+            { id: "web-development", name: t("web-development") },
             { id: "web-application", name: t("web-application") },
         ],
         [t]

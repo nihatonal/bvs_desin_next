@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Expand } from "lucide-react";
-import { Parallax } from "react-scroll-parallax";
 import FullscreenImageModal from "./FullscreenImageModal";
 import Image from "@/node_modules/next/image";
 
@@ -132,17 +131,14 @@ export default function ProjectDetailsClient({ project }: ProjectDetailsClientPr
                     </motion.div>
                 </div>
 
-
-                <Parallax speed={-15}>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        className="relative mb-12 rounded-xl shadow-md h-56 lg:h-96 overflow-hidden">
-                        <div className="absolute inset-0 bg-black bg-opacity-20 pointer-events-none"></div>
-                        <Image width={1200} height={400} quality={100} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-full object-cover" src={project.images[0]} alt={project.title} />
-                    </motion.div>
-                </Parallax>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="relative mb-12 rounded-xl shadow-md h-56 lg:h-96 overflow-hidden">
+                    <div className="absolute inset-0 bg-black bg-opacity-20 pointer-events-none"></div>
+                    <Image width={1200} height={400} quality={100} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-full object-cover" src={project.images[0]} alt={project.title} />
+                </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-12">
                     <motion.div
