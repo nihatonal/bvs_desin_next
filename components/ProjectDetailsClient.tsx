@@ -3,13 +3,12 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Expand } from "lucide-react";
 import FullscreenImageModal from "./FullscreenImageModal";
 import Image from "@/node_modules/next/image";
 import { handleMenuNavigation } from "@/utils/navigation";
-import { usePathname } from "@/node_modules/next/navigation";
+import { usePathname, useRouter } from "@/node_modules/next/navigation";
 
 interface Testimonial {
     content: string;
@@ -60,7 +59,8 @@ export default function ProjectDetailsClient({ project }: ProjectDetailsClientPr
     const handleMenuClick = (id: string) => {
         handleMenuNavigation({
             id,
-            pathname
+            pathname,
+            router,
         });
     };
 
