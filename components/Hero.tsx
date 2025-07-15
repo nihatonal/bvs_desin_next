@@ -6,18 +6,25 @@ import { useRef } from "react";
 import Image from "next/image";
 import hero_image from "../assets/webp/codes.webp";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import { handleMenuNavigation } from "@/utils/navigation";
+import { usePathname, useRouter } from "@/node_modules/next/navigation";
 const Parallax = dynamic(
     () => import("react-scroll-parallax").then((mod) => mod.Parallax),
     { ssr: false }
 );
 
 export default function Hero(): JSX.Element {
+    const router = useRouter();
+    const pathname = usePathname();
     const t = useTranslations("hero");
     const ref = useRef(null);
 
     const scrollToSection = (id: string) => {
-        const section = document.getElementById(id);
-        if (section) section.scrollIntoView({ behavior: "smooth" });
+        handleMenuNavigation({
+            id,
+            pathname,
+            router
+        });
     };
 
     return (

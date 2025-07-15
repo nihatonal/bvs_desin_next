@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
-import Link from "@/node_modules/next/link";
+import { usePathname, useRouter } from "@/node_modules/next/navigation";
+import { handleMenuNavigation } from "@/utils/navigation";
 
 import React from "react";
 
@@ -10,13 +11,23 @@ const Logo = ({
     className?: string;
     spanDesign?: string;
 }) => {
+    const pathname = usePathname();
+    const router = useRouter();
+    const scrollToHome = (id: string) => {
+        handleMenuNavigation({
+            id,
+            pathname,
+            router
+        });
+    };
     return (
-        <Link aria-label="home page" href={"/"} className="inline-flex">
+        <button aria-label="home page" className="inline-flex">
             <h2
                 className={cn(
                     "text-2xl text-bvs-accent font-black tracking-wider uppercase hover:text-bvs-purple hoverEffect group font-sans",
                     className
                 )}
+                onClick={() => scrollToHome("home")}
             >
                 Bvs-
                 <span
@@ -28,7 +39,7 @@ const Logo = ({
                     Design
                 </span>
             </h2>
-        </Link>
+        </button>
     );
 };
 

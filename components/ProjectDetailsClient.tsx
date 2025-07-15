@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Expand } from "lucide-react";
 import FullscreenImageModal from "./FullscreenImageModal";
 import Image from "@/node_modules/next/image";
+import { handleMenuNavigation } from "@/utils/navigation";
+import { usePathname } from "@/node_modules/next/navigation";
 
 interface Testimonial {
     content: string;
@@ -41,6 +43,7 @@ interface ProjectDetailsClientProps {
 
 export default function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
     const t = useTranslations("projectDetail");
+    const pathname = usePathname();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const router = useRouter();
 
@@ -55,13 +58,10 @@ export default function ProjectDetailsClient({ project }: ProjectDetailsClientPr
     };
 
     const handleMenuClick = (id: string) => {
-        if (location.pathname === "/") {
-            const section = document.getElementById(id);
-            if (section) section.scrollIntoView({ behavior: "smooth" });
-        } else {
-            router.push("/");
-            sessionStorage.setItem("scrollTo", id);
-        }
+        handleMenuNavigation({
+            id,
+            pathname
+        });
     };
 
     useEffect(() => {

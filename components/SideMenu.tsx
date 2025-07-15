@@ -6,6 +6,7 @@ import SocialMedia from './SocialMedia';
 import { useOutsideClick } from '@/hooks/index';
 import { useTranslations } from "next-intl";
 import Logo from './Logo';
+import { handleMenuNavigation } from '@/utils/navigation';
 interface SidebarProps {
     isOpen: boolean;
     onClose: () => void;
@@ -27,19 +28,12 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
     ];
 
     const handleMenuClick = (id: string) => {
-        const locale = pathname.split("/")[1]; // tr, en, ru gibi
-        const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
-        setSelectedSection(id)
-        if (isHomePage) {
-            const section = document.getElementById(id);
-
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
-        } else {
-            router.push(`/${locale}`); // lokalize ana sayfaya yönlendir
-            sessionStorage.setItem("scrollTo", id);
-        }
+        handleMenuNavigation({
+            id,
+            pathname,
+            router,
+            setSelectedSection,
+        });
     };
 
 
