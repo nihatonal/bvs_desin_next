@@ -20,10 +20,12 @@ Object.entries(slugMap).forEach(([canonical, langs]) => {
 });
 
 export async function generateStaticParams() {
-  const slugs = [];
+  const slugs: { locale: string; slug: string }[] = [];
 
-  for (const [locale, map] of Object.entries(routeMap)) {
-    for (const slug of Object.keys(map)) {
+  // routeMap key'leri 'locale/slug' formatında stringler
+  for (const key of Object.keys(routeMap)) {
+    const [locale, slug] = key.split("/");
+    if (locale && slug) {
       slugs.push({ locale, slug });
     }
   }
@@ -45,8 +47,8 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function LegalPage({ params }: Props) {
-  const { locale, slug } = await params; // 👈 burada await şart
+export default async function LegalPage({ params }: { params: { locale: string; slug: string } }) {
+  const { locale, slug } = params; // 👈 burada await şart
   const pageKey = routeMap[`${locale}/${slug}`];
 
   switch (pageKey) {
