@@ -5,10 +5,9 @@ import TermsOfService from "@/components/legal/TermsOfService";
 import PrivacyPolicy from "@/components/legal/PrivacyPolicy";
 import CookiePolicy from "@/components/legal/CookiePolicy";
 import { slugMap } from "@/utils/slugMap";
-// type Locale = "tr" | "en" | "ru";
 
 type Props = {
-  params: Promise<{ locale: string; slug: string; }>;
+  params: { locale: string; slug: string };
 };
 
 const routeMap: Record<string, keyof typeof slugMap> = {};
@@ -22,7 +21,6 @@ Object.entries(slugMap).forEach(([canonical, langs]) => {
 export async function generateStaticParams() {
   const slugs: { locale: string; slug: string }[] = [];
 
-  // routeMap key'leri 'locale/slug' formatında stringler
   for (const key of Object.keys(routeMap)) {
     const [locale, slug] = key.split("/");
     if (locale && slug) {
@@ -33,9 +31,8 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-// 🛠️ BURASI HATAYI DÜZELTEN YER
 export async function generateMetadata({ params }: Props) {
-  const { locale, slug } = await params; // 👈 await şart
+  const { locale, slug } = params;
   const pageKey = routeMap[`${locale}/${slug}`];
   if (!pageKey) return notFound();
 
@@ -47,8 +44,8 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function LegalPage({ params }: { params: { locale: string; slug: string } }) {
-  const { locale, slug } = params; // 👈 burada await şart
+export default async function LegalPage({ params }: Props) {
+  const { locale, slug } = params;
   const pageKey = routeMap[`${locale}/${slug}`];
 
   switch (pageKey) {
