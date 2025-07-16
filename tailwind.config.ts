@@ -89,7 +89,7 @@ const config = {
           blue: "#1A237E",
           purple: "#7E69AB",
           lightPurple: "#9b87f5",
-          accent: "#6E59A5",
+          accent: "#5D4D8F",
           white: "#FFFFFF",
           gray: "#F6F6F7",
         },

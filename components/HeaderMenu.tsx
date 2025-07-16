@@ -36,7 +36,7 @@ const HeaderMenu = () => {
                     key={item?.id}
                     aria-label="nav button"
                     onClick={() => handleMenuClick(item.id)}
-                    className={`whitespace-nowrap hover:text-bvs-accent hoverEffect relative group ${selectedSection === item?.id && "text-bvs-purple"
+                    className={`whitespace-nowrap hover:text-bvs-accent hoverEffect relative group ${selectedSection === item?.id && "text-bvs-accent"
                         }`}
                 >
                     {item.label}

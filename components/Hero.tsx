@@ -53,14 +53,14 @@ export default function Hero(): JSX.Element {
                             <button
                                 aria-label="portfolio button"
                                 onClick={() => scrollToSection("portfolio")}
-                                className="flex items-center justify-center gap-2 bg-bvs-primary hover:bg-bvs-primary/90 py-2 px-4 text-white rounded-[8px]"
+                                className="flex items-center justify-center gap-2 bg-bvs-accent hover:bg-bvs-purple py-2 px-4 text-white rounded-[8px]"
                             >
                                 {t("cta_1")}<ArrowRight className="w-4 h-4" />
                             </button>
                             <button
                                 aria-label="contact button"
                                 onClick={() => scrollToSection("contact")}
-                                className="flex items-center justify-center gap-2 btn-outline py-2 px-4 text-bvs-primary border border-1 border-bvs-primary/80 hover:bg-bvs-primary/90 hover:text-white rounded-[8px]"
+                                className="flex items-center justify-center gap-2 btn-outline py-2 px-4 text-bvs-accent border border-1 border-bvs-accent hover:bg-bvs-purple hover:text-white rounded-[8px]"
                             >
                                 {t("cta_2")}<MessageSquare className="w-4 h-4" />
                             </button>
@@ -100,10 +100,10 @@ export default function Hero(): JSX.Element {
 
                 {/* Scroll Indicator */}
                 <div className="absolute bottom-32 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                    <div className="w-10 h-16 border-2 border-bvs-lightPurple rounded-full flex justify-center mb-1">
-                        <div className="w-1 h-3 bg-bvs-lightPurple rounded-full mt-2 animate-scroll"></div>
+                    <div className="w-10 h-16 border-2 border-bvs-accent/80 rounded-full flex justify-center mb-1">
+                        <div className="w-1 h-3 bg-bvs-accent/80 rounded-full mt-2 animate-scroll"></div>
                     </div>
-                    <span className="text-sm text-gray-400">{t("scroll")}</span>
+                    <span className="text-sm text-[#58758D]">{t("scroll")}</span>
                 </div>
             </div>
         </div>
