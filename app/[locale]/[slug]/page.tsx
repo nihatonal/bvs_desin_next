@@ -6,9 +6,7 @@ import PrivacyPolicy from "@/components/legal/PrivacyPolicy";
 import CookiePolicy from "@/components/legal/CookiePolicy";
 import { slugMap } from "@/utils/slugMap";
 
-type Props = {
-  params: { locale: string; slug: string };
-};
+type ParamsType = { locale: string; slug: string };
 
 const routeMap: Record<string, keyof typeof slugMap> = {};
 
@@ -19,20 +17,18 @@ Object.entries(slugMap).forEach(([canonical, langs]) => {
 });
 
 export async function generateStaticParams() {
-  const slugs: { locale: string; slug: string }[] = [];
+  const slugs = [];
 
   for (const key of Object.keys(routeMap)) {
     const [locale, slug] = key.split("/");
-    if (locale && slug) {
-      slugs.push({ locale, slug });
-    }
+    if (locale && slug) slugs.push({ locale, slug });
   }
 
   return slugs;
 }
 
-export async function generateMetadata({ params }: Props) {
-  const { locale, slug } = params;
+export async function generateMetadata({ params }: { params: Promise<ParamsType> }) {
+  const { locale, slug } = await params;
   const pageKey = routeMap[`${locale}/${slug}`];
   if (!pageKey) return notFound();
 
@@ -44,9 +40,14 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function LegalPage({ params }: Props) {
-  const { locale, slug } = params;
+export default async function LegalPage({ params }: { params: Promise<ParamsType> }) {
+  const { locale, slug } = await params;
+
   const pageKey = routeMap[`${locale}/${slug}`];
+  if (!pageKey) {
+    notFound();
+    return null;
+  }
 
   switch (pageKey) {
     case "terms-of-service":
@@ -57,5 +58,6 @@ export default async function LegalPage({ params }: Props) {
       return <CookiePolicy />;
     default:
       notFound();
+      return null;
   }
 }
