@@ -25,7 +25,7 @@ const Header = () => {
                     : "bg-transparent"
                 }`}
         >
-            <Container className="flex items-center justify-between text-lightColor">
+            <Container className="flex items-center justify-between text-bvs-lightColor">
                 <div className="w-auto md:w-1/3 flex items-center gap-2.5 justify-start md:gap-0">
                     <MobileMenu />
                     <Logo />

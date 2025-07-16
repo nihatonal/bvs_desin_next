@@ -30,7 +30,7 @@ const NotFoundPage = () => {
             <Link
               aria-label="home page"
               href="/"
-              className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-semibold rounded-md text-white bg-bvs-purple hover:bg-bvs-lightPurple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amazonOrangeDark hoverEffect"
+              className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-semibold rounded-md text-white bg-bvs-purple hover:bg-bvs-lightPurple transition"
             >
               Go to BVS-Design Home Page
             </Link>
