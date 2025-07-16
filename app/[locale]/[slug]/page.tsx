@@ -28,36 +28,46 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<ParamsType> }) {
-  const { locale, slug } = await params;
-  const pageKey = routeMap[`${locale}/${slug}`];
-  if (!pageKey) return notFound();
+  try {
+    const { locale, slug } = await params;
+    const pageKey = routeMap[`${locale}/${slug}`];
+    if (!pageKey) return notFound();
 
-  const t = await getTranslations({ locale, namespace: pageKey });
+    const t = await getTranslations({ locale, namespace: pageKey });
 
-  return {
-    title: t("meta.title"),
-    description: t("meta.description"),
-  };
+    return {
+      title: t("meta.title"),
+      description: t("meta.description"),
+    };
+  } catch (error) {
+    console.error("generateMetadata error:", error);
+    throw error;  // Hatanın görünmesi için
+  }
 }
 
 export default async function LegalPage({ params }: { params: Promise<ParamsType> }) {
-  const { locale, slug } = await params;
+  try {
+    const { locale, slug } = await params;
 
-  const pageKey = routeMap[`${locale}/${slug}`];
-  if (!pageKey) {
-    notFound();
-    return null;
-  }
-
-  switch (pageKey) {
-    case "terms-of-service":
-      return <TermsOfService />;
-    case "privacy-policy":
-      return <PrivacyPolicy />;
-    case "cookie-policy":
-      return <CookiePolicy />;
-    default:
+    const pageKey = routeMap[`${locale}/${slug}`];
+    if (!pageKey) {
       notFound();
       return null;
+    }
+
+    switch (pageKey) {
+      case "terms-of-service":
+        return <TermsOfService />;
+      case "privacy-policy":
+        return <PrivacyPolicy />;
+      case "cookie-policy":
+        return <CookiePolicy />;
+      default:
+        notFound();
+        return null;
+    }
+  } catch (error) {
+    console.error("LegalPage error:", error);
+    throw error;
   }
 }
