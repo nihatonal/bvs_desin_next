@@ -9,6 +9,7 @@ export default function RootLayout({
         <html lang="tr">
             <head>
                 <link rel="manifest" href="/manifest.json" />
+                <link rel="icon" href="/favicon.ico" sizes="any" />
                 <meta name="theme-color" content="#9F8CFD" />
                 <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
             </head>
