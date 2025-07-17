@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Parallax } from "react-scroll-parallax";
 
-export default function HiddenImageSection({ hero_image }: { hero_image: string }) {
+export default function HiddenImageSection({ hero_image }: { hero_image: StaticImageData | string }) {
     return (
         <div className="hidden lg:block grid-in-image ml-auto">
             <Parallax speed={-10}>
