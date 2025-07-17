@@ -1,24 +1,40 @@
 "use client";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
-import { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 
-import Image from "next/image";
 import hero_image from "../public/images/stylish_realistic_web_designer_office__2.webp";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { handleMenuNavigation } from "@/utils/navigation";
 import { usePathname, useRouter } from "@/node_modules/next/navigation";
-const Parallax = dynamic(
-    () => import("react-scroll-parallax").then((mod) => mod.Parallax),
-    { ssr: false }
-);
 
-export default function Hero(): JSX.Element {
+const HiddenImageSection = dynamic(() => import('@/components/HiddenImageSection'), {
+    ssr: false, // sadece istemci tarafında yüklenecek
+    loading: () => null, // yüklenene kadar hiçbir şey gösterme
+});
+
+export default function Hero() {
     const router = useRouter();
     const pathname = usePathname();
     const t = useTranslations("hero");
-    const ref = useRef(null);
+    const [showSection, setShowSection] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShowSection(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "200px" } // biraz önden yüklemeye başlasın
+        );
+
+        if (ref.current) observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, []);
     const scrollToSection = (id: string) => {
         handleMenuNavigation({
             id,
@@ -72,29 +88,8 @@ export default function Hero(): JSX.Element {
                     </div>
 
                     {/* Image */}
-                    <div className="hidden lg:block grid-in-image ml-auto">
-                        <Parallax speed={-10}>
-                            <div className="relative w-full max-w-lg">
-                                <div className="absolute -top-4 -left-4 w-72 h-72 bg-bvs-purple rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob"></div>
-                                <div className="absolute -bottom-8 right-4 w-72 h-72 bg-bvs-light-purple rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
-
-                                <div className="bg-white rounded-2xl shadow-xl p-4">
-                                    <div className="rounded-xl bg-gray-50 flex flex-col items-center overflow-hidden aspect-[5/3] w-full relative min-h-[180px] md:min-h-[300px]">
-                                        <Image
-                                            src={hero_image}
-                                            alt="Illustration of code editor interface"
-                                            width={800}
-                                            height={600}
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object-cover rounded-xl"
-                                            priority
-                                            fetchPriority="high"
-                                            placeholder="blur"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </Parallax>
+                    <div ref={ref}>
+                        {showSection && <HiddenImageSection hero_image={hero_image} />}
                     </div>
                 </div>
 
