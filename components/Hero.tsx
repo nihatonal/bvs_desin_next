@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 
 import Image from "next/image";
-import hero_image from "../assets/webp/codes.webp";
+import hero_image from "../public/images/stylish_realistic_web_designer_office__2.webp";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { handleMenuNavigation } from "@/utils/navigation";
 import { usePathname, useRouter } from "@/node_modules/next/navigation";

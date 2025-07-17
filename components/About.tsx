@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import Container from "./Container";
 import Image from "@/node_modules/next/image";
-
+import about_image from "../public/images/stylish_realistic_web_designer_office_3.webp"
 export default function AboutMe() {
     const t = useTranslations("about");
     const ref = useRef<HTMLHeadingElement | null>(null);
@@ -58,7 +58,7 @@ export default function AboutMe() {
                                 <div className="absolute -inset-4 bg-bvs-purple/20 rounded-xl rotate-3"></div>
                                 <Image
                                     width={800} height={600}
-                                    src="https://i.ibb.co/sdQpg96M/about.webp"
+                                    src={about_image}
                                     alt="Nihat Onal - Web Designer"
                                     className="relative object-cover z-10 w-full h-auto rounded-lg shadow-lg"
                                 />
