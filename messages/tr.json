@@ -1,11 +1,11 @@
 {
   "metadata": {
     "home": {
-      "title": "BVS Design | Web Geliştirici & Tasarımcı",
+      "title": "Bravix Creative | Web Geliştirici & Tasarımcı",
       "description": "Hızlı, duyarlı ve kullanıcı dostu web siteleri oluşturan deneyimli web geliştirici ve tasarımcı."
     },
     "projects": {
-      "title": "Hizmetler | BVS Design",
+      "title": "Hizmetler | Bravix Creative",
       "description": "Web Tasarımı, Geliştirme ve CMS çözümleri dahil profesyonel hizmetleri keşfedin."
     }
   },
@@ -32,7 +32,7 @@
     "title": "Hakkımızda",
     "subtitle": "Nihat Önal tarafından kurulan",
     "role": "Web Geliştirme & Tasarım Stüdyosu",
-    "paragraph1": "BVS Design, 6+ yıllık deneyime sahip web geliştirici ve tasarımcı Nihat Önal tarafından kuruldu. Markaların dijital dünyada öne çıkmasına yardımcı olmak için modern ve yüksek performanslı dijital çözümler üretiyoruz.",
+    "paragraph1": "Bravix Creative, 6+ yıllık deneyime sahip web geliştirici ve tasarımcı Nihat Önal tarafından kuruldu. Markaların dijital dünyada öne çıkmasına yardımcı olmak için modern ve yüksek performanslı dijital çözümler üretiyoruz.",
     "paragraph2": "Fonksiyonellikle tasarım mükemmelliğini birleştiren, temiz, kullanıcı dostu ve görsel olarak etkileyici projeler geliştiriyoruz.",
     "statistics": {
       "experience": "Yıllık Deneyim",
@@ -270,14 +270,14 @@
   },
   "privacy-policy": {
     "meta": {
-      "title": "Gizlilik Politikası | BVS Design",
-      "description": "BVS Design olarak kişisel verilerinizin gizliliğine önem veriyoruz. Detaylı bilgiyi gizlilik politikamızda bulabilirsiniz."
+      "title": "Gizlilik Politikası | Bravix Creative",
+      "description": "Bravix Creative olarak kişisel verilerinizin gizliliğine önem veriyoruz. Detaylı bilgiyi gizlilik politikamızda bulabilirsiniz."
     },
     "title": "Gizlilik Politikası",
     "sections": {
       "0": {
         "heading": "1. Giriş",
-        "text": "BVS Design olarak, kişisel verilerinizin güvenliği bizim için en yüksek önceliktir. Bu politika, web sitemizi kullanırken topladığımız bilgileri ve bu bilgileri nasıl kullandığımızı açıklamaktadır."
+        "text": "Bravix Creative olarak, kişisel verilerinizin güvenliği bizim için en yüksek önceliktir. Bu politika, web sitemizi kullanırken topladığımız bilgileri ve bu bilgileri nasıl kullandığımızı açıklamaktadır."
       },
       "1": {
         "heading": "2. Toplanan Bilgiler",
@@ -303,8 +303,8 @@
   },
   "terms-of-service": {
     "meta": {
-      "title": "Hizmet Şartları | BVS Design",
-      "description": "BVS Design hizmetlerini kullanmadan önce lütfen hizmet şartlarımızı dikkatlice okuyun."
+      "title": "Hizmet Şartları | Bravix Creative",
+      "description": "Bravix Creative hizmetlerini kullanmadan önce lütfen hizmet şartlarımızı dikkatlice okuyun."
     },
     "title": "Hizmet Şartları",
     "sectionOrder": [
@@ -318,11 +318,11 @@
     "sections": {
       "0": {
         "heading": "1. Kabul",
-        "text": "BVS Design web sitesini kullanarak, bu Hizmet Şartlarını kabul etmiş sayılırsınız. Bu şartları kabul etmiyorsanız, lütfen web sitemizi kullanmayınız."
+        "text": "Bravix Creative web sitesini kullanarak, bu Hizmet Şartlarını kabul etmiş sayılırsınız. Bu şartları kabul etmiyorsanız, lütfen web sitemizi kullanmayınız."
       },
       "1": {
         "heading": "2. Hizmet Tanımı",
-        "text": "BVS Design, web tasarımı ve dijital çözümler sunar. Sunulan hizmetler, zamanla güncellenebilir veya değiştirilebilir."
+        "text": "Bravix Creative, web tasarımı ve dijital çözümler sunar. Sunulan hizmetler, zamanla güncellenebilir veya değiştirilebilir."
       },
       "2": {
         "heading": "3. Kullanıcı Sorumluluğu",
@@ -330,7 +330,7 @@
       },
       "3": {
         "heading": "4. Fikri Mülkiyet",
-        "text": "Bu sitedeki tüm içerik (tasarımlar, metinler, logolar vb.) BVS Design’a aittir ve izinsiz kullanılamaz."
+        "text": "Bu sitedeki tüm içerik (tasarımlar, metinler, logolar vb.) Bravix Creative’a aittir ve izinsiz kullanılamaz."
       },
       "4": {
         "heading": "5. Değişiklikler",
@@ -344,7 +344,7 @@
   },
   "cookie-policy": {
     "meta": {
-      "title": "Çerez Politikası | BVS Design",
+      "title": "Çerez Politikası | Bravix Creative",
       "description": "Web sitemizin çerez kullanımına dair detaylı bilgiye buradan ulaşabilirsiniz."
     },
     "title": "Çerez Politikası",

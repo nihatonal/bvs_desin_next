@@ -78,8 +78,8 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-10 mb-10">
                     {/* Company Info */}
                     <div>
-                        <div className="text-white text-2xl font-bold mb-4 flex items-center">
-                            <Logo className="text-bvs-lightPurple hover:text-bvs-lightPurple" spanDesign="text-white group-hover:text-bvs-lightPurple" />
+                        <div className=" font-bold mb-4 flex items-center">
+                            <Logo className="text-white" spanDesign="text-white" />
 
                         </div>
                         <p className="text-gray-300 mb-4">{t("title")}</p>

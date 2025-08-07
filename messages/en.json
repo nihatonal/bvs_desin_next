@@ -1,11 +1,11 @@
 {
   "metadata": {
     "home": {
-      "title": "BVS Design | Web Developer & Designer",
+      "title": "Bravix Creative | Web Developer & Designer",
       "description": "Experienced web developer & designer creating fast, responsive and user-friendly websites."
     },
     "projects": {
-      "title": "Services | BVS Design",
+      "title": "Services | Bravix Creative",
       "description": "Explore professional services including Web Design, Development, and CMS solutions."
     }
   },
@@ -32,7 +32,7 @@
     "title": "About Us",
     "subtitle": "Founded by Nihat Önal",
     "role": "Web Development & Design Studio",
-    "paragraph1": "BVS Design was founded by Nihat Önal, a web developer and designer with 6+ years of experience. We create modern, high-performance digital solutions to help brands stand out online.",
+    "paragraph1": "Bravix Creative was founded by Nihat Önal, a web developer and designer with 6+ years of experience. We create modern, high-performance digital solutions to help brands stand out online.",
     "paragraph2": "We build clean, user-friendly and visually striking projects that combine functionality with design excellence.",
     "statistics": {
       "experience": "Years of Experience",
@@ -270,14 +270,14 @@
   },
   "privacy-policy": {
     "meta": {
-      "title": "Privacy Policy | BVS Design",
-      "description": "At BVS Design, we prioritize the privacy of your personal data. You can find detailed information in our privacy policy."
+      "title": "Privacy Policy | Bravix Creative",
+      "description": "At Bravix Creative, we prioritize the privacy of your personal data. You can find detailed information in our privacy policy."
     },
     "title": "Privacy Policy",
     "sections": {
       "0": {
         "heading": "1. Introduction",
-        "text": "At BVS Design, the security of your personal data is our top priority. This policy explains what information we collect when you use our website and how we use that information."
+        "text": "At Bravix Creative, the security of your personal data is our top priority. This policy explains what information we collect when you use our website and how we use that information."
       },
       "1": {
         "heading": "2. Information We Collect",
@@ -303,18 +303,18 @@
   },
   "terms-of-service": {
     "meta": {
-      "title": "Terms of Service | BVS Design",
-      "description": "Please read our Terms of Service carefully before using BVS Design services."
+      "title": "Terms of Service | Bravix Creative",
+      "description": "Please read our Terms of Service carefully before using Bravix Creative services."
     },
     "title": "Terms of Service",
     "sections": {
       "0": {
         "heading": "1. Acceptance",
-        "text": "By using the BVS Design website, you agree to these Terms of Service. If you do not agree, please do not use our website."
+        "text": "By using the Bravix Creative website, you agree to these Terms of Service. If you do not agree, please do not use our website."
       },
       "1": {
         "heading": "2. Service Description",
-        "text": "BVS Design offers web design and digital solutions. The services offered may be updated or changed over time."
+        "text": "Bravix Creative offers web design and digital solutions. The services offered may be updated or changed over time."
       },
       "2": {
         "heading": "3. User Responsibility",
@@ -322,7 +322,7 @@
       },
       "3": {
         "heading": "4. Intellectual Property",
-        "text": "All content on this site (designs, texts, logos, etc.) belongs to BVS Design and cannot be used without permission."
+        "text": "All content on this site (designs, texts, logos, etc.) belongs to Bravix Creative and cannot be used without permission."
       },
       "4": {
         "heading": "5. Changes",
@@ -336,8 +336,8 @@
   },
   "cookie-policy": {
     "meta": {
-      "title": "Cookie Policy | BVS Design",
-      "description": "Learn more about how BVS Design uses cookies to improve your experience."
+      "title": "Cookie Policy | Bravix Creative",
+      "description": "Learn more about how Bravix Creative uses cookies to improve your experience."
     },
     "title": "Cookie Policy",
     "sections": {

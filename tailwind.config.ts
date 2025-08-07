@@ -103,6 +103,8 @@ const config = {
           lightGreen: "#3b9c3c",
           darkColorL: "#151515",
           lightColor: "#52525b",
+          logoText:"#0B1F3F",
+          logoX:"#FFC700"
         },
 
         chart: {

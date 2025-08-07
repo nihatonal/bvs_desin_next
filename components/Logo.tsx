@@ -21,24 +21,25 @@ const Logo = ({
         });
     };
     return (
-        <button aria-label="home page" className="inline-flex">
+        <button aria-label="home page" className="flex flex-col text-bvs-logoText">
             <h2
                 className={cn(
-                    "text-2xl text-bvs-accent font-black tracking-wider uppercase hover:text-bvs-purple hoverEffect group font-sans",
+                    "text-2xl text-bvs-logoT font-black tracking-wider uppercase hover:text-bvs-purple hoverEffect group font-sans",
                     className
                 )}
                 onClick={() => scrollToHome("home")}
             >
-                Bravix
-                <span
-                    className={cn(
-                        "text-bvs-blue group-hover:text-bvs-accent hoverEffect",
-                        spanDesign
-                    )}
-                >
-                    Design
-                </span>
+                Bravi<span className="text-bvs-logoX">X</span>{" "}
+
             </h2>
+            <span
+                className={cn(
+                    "text-md group-hover:text-bvs-accent hoverEffect",
+                    spanDesign
+                )}
+            >
+                Creative
+            </span>
         </button>
     );
 };
