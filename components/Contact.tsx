@@ -9,6 +9,7 @@ import { usePlan } from '../lib/PlanContext';
 import { useToast } from "@/hooks/toast";
 import SocialMedia from "./SocialMedia";
 import axios from "axios";
+import Newsletters from "./Newsletters";
 
 interface FormData {
     name: string;
@@ -54,7 +55,7 @@ const Contact: React.FC = () => {
         const updatedForm = { ...formData, ...data }
 
         try {
-            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/sendmail`, updatedForm);
+            await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/form`, updatedForm);
             alert("Mesaj başarıyla gönderildi!");
         } catch (err) {
             console.error(err);
@@ -294,7 +295,8 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gradient-to-r from-bvs-purple to-bvs-lightPurple p-6 text-white rounded-xl">
+                        <Newsletters />
+                        <div className="bg-gradient-to-r from-bvs-lightPurple to-bvs-accent p-6 text-white rounded-xl">
                             <h3 className="text-xl font-semibold mb-2">{t("letsMeet")}</h3>
                             <p className="mb-4 opacity-90">{t("letsMeetSub")}</p>
                             <SocialMedia className="text-bvs-accent" iconClassName=" text-white hover:bg-white/80 hover:text-bvs-lightPurple p-2 rounded-full transition-colors" />

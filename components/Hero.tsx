@@ -8,6 +8,7 @@ import hero_image from "../public/images/stylish_realistic_web_designer_office__
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { handleMenuNavigation } from "@/utils/navigation";
 import { usePathname, useRouter } from "@/node_modules/next/navigation";
+
 const Parallax = dynamic(
     () => import("react-scroll-parallax").then((mod) => mod.Parallax),
     { ssr: false }

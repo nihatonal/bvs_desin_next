@@ -42,7 +42,7 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
     bg-black/50 text-white/80 shadow-xl ${isOpen ? "translate-x-0" : "-translate-x-full"}
     hoverEffect`}
     >
-        <div ref={sidebarRef} className='min-w-72 max-w-96 bg-black h-screen p-10
+        <div ref={sidebarRef} className='min-w-72 max-w-96 bg-[#144857] h-screen p-10
     border-r border-r-bvs-lightGreen flex flex-col gap-6 
     '>
             <div className='flex items-center justify-between gap-5'>
@@ -53,7 +53,7 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <X />
                 </button>
             </div>
-            <div className='flex flex-col space-y-3.5 font-semibold tracking-wide'>
+            <div className='flex flex-col space-y-3.5 font-semibold tracking-wide text-stone-50'>
                 {navItems?.map((item) => (
                     <button key={item?.id}
                         aria-label="nav button"
@@ -61,8 +61,8 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
                             onClose()
                             handleMenuClick(item.id)
                         }}
-                        className={`hover:text-bvs-purple hoverEffect 
-            ${selectedSection === item?.id && "text-bvs-purple"}`}
+                        className={`hover:text-bvs-lightPurple hoverEffect 
+            ${selectedSection === item?.id && "text-bvs-lightPurple"}`}
                     >
                         {item?.label}
                     </button>
