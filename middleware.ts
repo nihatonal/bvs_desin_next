@@ -5,5 +5,8 @@ export default createMiddleware(routing);
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(en|tr|ru)/:path*"],
+  matcher: [
+    // Ana sayfa ve dil path'leriyle eşleş, ancak bazı statik dosyaları hariç tut
+    "/((?!_next|favicon.ico|manifest.json|icons|robots.txt|sitemap.xml).*)",
+  ],
 };
