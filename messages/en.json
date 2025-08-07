@@ -29,11 +29,12 @@
     "contact": "Contact"
   },
   "about": {
-    "title": "About Us",
+    "title": "About Bravix Creative",
     "subtitle": "Founded by Nihat Önal",
     "role": "Web Development & Design Studio",
-    "paragraph1": "Bravix Creative was founded by Nihat Önal, a web developer and designer with 6+ years of experience. We create modern, high-performance digital solutions to help brands stand out online.",
-    "paragraph2": "We build clean, user-friendly and visually striking projects that combine functionality with design excellence.",
+    "paragraph1": "At Bravix Creative, we specialize in transforming ideas into digital experiences. As a modern design and development studio, we deliver tailored solutions that combine clean code, strong visuals, and user-centered functionality.",
+    "paragraph2": "With a focus on performance, usability, and brand identity, we help businesses and entrepreneurs create impactful websites and digital products that stand out in today’s competitive landscape. Whether you're launching a new brand or evolving an existing one, we bring clarity, creativity, and consistency to every project.",
+    "paragraph3": "Driven by innovation and guided by strategic thinking, Bravix Creative is your partner in building lasting digital presence.",
     "statistics": {
       "experience": "Years of Experience",
       "projects": "Completed Projects",
@@ -42,19 +43,24 @@
   },
   "services": {
     "title": "Services",
-    "subtitle": "What I can do for you",
+    "subtitle": "How We Help You Succeed",
     "webDev": "Web Development",
-    "webDevDesc": "Custom websites built with React JS and modern technologies",
+    "ctaWebDev": "Explore Builds",
+    "webDevDesc": "Fast, scalable, and responsive websites developed with React JS and the latest web technologies — built to perform and grow with your business.",
     "ecommerce": "E-Commerce Solutions",
-    "ecommerceDesc": "Online stores with secure payment gateways and inventory management",
+    "ctaEcommerce": "Build My Store",
+    "ecommerceDesc": "Robust e-commerce platforms with seamless checkout experiences, secure payment integration, and smart inventory control tailored to your business needs.",
     "uiDesign": "UI/UX Design",
-    "uiDesignDesc": "Beautiful, intuitive interfaces designed with Figma",
+    "ctaUIdesign": "View Design Process",
+    "uiDesignDesc": "Intuitive, engaging interfaces designed with a user-first approach — from wireframes to high-fidelity prototypes, crafted in Figma.",
     "seo": "SEO Optimization",
-    "seoDesc": "Improve your search rankings and visibility online",
+    "ctaSEO": "Explore Strategy",
+    "seoDesc": "On-page and technical SEO strategies to boost your visibility, increase organic traffic, and outperform your competition on search engines.",
     "mobileApp": "Mobile Applications",
     "mobileAppDesc": "Cross-platform mobile apps that work on all devices",
     "maintenance": "Maintenance",
-    "maintenanceDesc": "Ongoing website support, updates and improvements",
+    "ctaMaintenance": "Get Ongoing Support",
+    "maintenanceDesc": "Continuous website maintenance, performance monitoring, and proactive updates — so your site stays fast, secure, and up-to-date.",
     "learnMore": "Learn More",
     "closeModal": "Close",
     "process": "Process",
@@ -63,7 +69,7 @@
   "serviceDetails": {
     "webDev": {
       "title": "Web Development",
-      "description": "I create custom, responsive websites using React JS, HTML5, and Tailwind CSS. Each site is built from the ground up to meet your specific needs and goals.",
+      "description": "At Bravix Creative, we deliver custom, responsive websites leveraging React JS, HTML5, and Tailwind CSS. Every project is meticulously crafted to align with your unique business objectives and deliver measurable results.",
       "process": [
         "Requirement gathering",
         "Wireframing and design",
@@ -82,7 +88,7 @@
     },
     "ecommerce": {
       "title": "E-Commerce Solutions",
-      "description": "Complete online store solutions with secure payment processing, inventory management, and user-friendly interfaces to showcase your products.",
+      "description": "We provide comprehensive e-commerce platforms featuring secure payment processing, streamlined inventory management, and intuitive user interfaces designed to showcase your products effectively and boost online sales.",
       "process": [
         "Store planning",
         "Product catalog setup",
@@ -100,7 +106,7 @@
     },
     "uiDesign": {
       "title": "UI/UX Design",
-      "description": "Beautiful, intuitive interfaces designed with the user in mind. I focus on creating experiences that are both visually appealing and easy to use.",
+      "description": "Our team specializes in creating beautiful, user-centric interfaces that combine aesthetic appeal with seamless usability. From user research to prototyping and final handoff, we ensure every design decision enhances the overall user experience.",
       "process": [
         "User research",
         "Wireframing",
@@ -118,7 +124,7 @@
     },
     "seo": {
       "title": "SEO Optimization",
-      "description": "Improve your website's visibility in search engines with comprehensive SEO strategies tailored to your business.",
+      "description": "We implement tailored SEO strategies that improve your website’s visibility on search engines, increase organic traffic, and drive sustainable business growth through comprehensive site audits, keyword research, and continuous performance monitoring.",
       "process": [
         "Site audit",
         "Keyword research",
@@ -136,7 +142,7 @@
     },
     "mobileApp": {
       "title": "Mobile Applications",
-      "description": "Cross-platform mobile applications that provide a seamless user experience across all devices.",
+      "description": "Bravix Creative develops cross-platform mobile applications that deliver seamless, engaging experiences across all devices. We manage the entire process from requirements definition through design, development, testing, and app store submission.",
       "process": [
         "Requirements definition",
         "UI/UX design",
@@ -154,7 +160,7 @@
     },
     "maintenance": {
       "title": "Maintenance",
-      "description": "Ongoing website support to ensure your site remains secure, up-to-date, and performing optimally.",
+      "description": "Our ongoing maintenance services ensure your website remains secure, up-to-date, and performs optimally. We provide regular updates, security monitoring, performance tuning, content refreshes, and proactive technical support.",
       "process": [
         "Regular updates",
         "Security monitoring",
@@ -172,8 +178,8 @@
     }
   },
   "portfolio": {
-    "title": "My Portfolio",
-    "subtitle": "Check out my latest projects and see what I can do for you",
+    "title": "Our Portfolio",
+    "subtitle": "Explore our recent projects to discover how we deliver innovative solutions that drive success for our clients.",
     "all": "All",
     "web-design": "Web Design",
     "web-development": "Web Development",
@@ -219,7 +225,7 @@
   },
   "cta": {
     "title": "Ready to Start Your Project?",
-    "subtitle": "Contact me to bring your ideas to life. Let's create something amazing together.",
+    "subtitle": "Contact us to bring your ideas to life. Let's create something amazing together.",
     "button": "Get in Touch"
   },
   "contact": {
@@ -231,7 +237,7 @@
     "message": "Your Message",
     "submit": "Send Message",
     "submit_newsletter": "Send",
-    "placeholderEmail":"Write your email",
+    "placeholderEmail": "Write your email",
     "info": "Contact Information",
     "address": "123 Business Street, Suite 100, City",
     "phone": "+7 909 931 66 70",
@@ -251,10 +257,11 @@
     "rights": "All Rights Reserved",
     "links": "Quick Links",
     "services": "Services",
-    "legal": "Legal",
+    "legal": "Legal Information",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "cookies": "Cookie Policy"
+    "cookies": "Cookie Policy",
+    "newsletter": "Newsletter"
   },
   "projectDetail": {
     "all": "All Projects",

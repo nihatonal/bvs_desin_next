@@ -9,7 +9,6 @@ import { usePlan } from '../lib/PlanContext';
 import { useToast } from "@/hooks/toast";
 import SocialMedia from "./SocialMedia";
 import axios from "axios";
-import Newsletters from "./Newsletters";
 
 interface FormData {
     name: string;
@@ -96,7 +95,7 @@ const Contact: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="bg-white p-6 rounded-xl shadow-sm"
                     >
-                        <form onSubmit={handleSubmit} className="space-y-5 flex flex-col lg:grid grid-cols-2 gap-x-4">
+                        <form onSubmit={handleSubmit} className="space-y-3 flex flex-col justify-between lg:grid grid-cols-2 gap-x-4">
                             <div className="col-span-2">
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                                     {t("name")}
@@ -209,7 +208,7 @@ const Contact: React.FC = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        <div className="bg-white p-6 rounded-xl shadow-sm mb-6">
+                        <div className="bg-white p-6 rounded-xl shadow-sm mb-8">
                             <h3 className="text-xl font-semibold mb-4">{t("info")}</h3>
 
                             <div className="space-y-4">
@@ -295,7 +294,7 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <Newsletters />
+
                         <div className="bg-gradient-to-r from-bvs-lightPurple to-bvs-accent p-6 text-white rounded-xl">
                             <h3 className="text-xl font-semibold mb-2">{t("letsMeet")}</h3>
                             <p className="mb-4 opacity-90">{t("letsMeetSub")}</p>

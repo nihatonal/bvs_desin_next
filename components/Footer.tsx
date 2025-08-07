@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import { FooterLegalLinks } from "./FooterLegalLinks";
 import Logo from "./Logo";
+import Newsletters from './Newsletters';
 import ServiceModal from "./ServiceModal";
 import SocialMedia from "./SocialMedia";
 
@@ -73,9 +74,9 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-bvs-dark pt-16 pb-8 px-2 lg:px-20">
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-4 gap-10 mb-10">
+        <footer className="relative bg-bvs-dark pt-16 pb-8 pb-8 px-2 lg:px-20">
+            <div className=" container mx-auto px-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
                     {/* Company Info */}
                     <div>
                         <div className=" font-bold mb-4 flex items-center">
@@ -108,10 +109,11 @@ export default function Footer() {
                         <h3 className="text-white text-lg font-semibold mb-4">{t("services")}</h3>
                         <ul className="space-y-2">
                             {services.map((service) => (
-                                <li key={service.id}>  {/* key eklendi */}
+                                <li key={service.id}
+                                >  {/* key eklendi */}
                                     <button
                                         onClick={() => openServiceModal(service.id)}
-                                        className="text-gray-300 hover:text-white transition-colors"
+                                        className=" text-left text-gray-300 hover:text-white transition-colors"
                                     >
                                         {service.title}
                                     </button>
@@ -122,7 +124,14 @@ export default function Footer() {
                     </div>
 
                     {/* Legal */}
-                    <FooterLegalLinks />
+                    <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">{t("legal")}</h3>
+                        <FooterLegalLinks />
+                    </div>
+                    <div className="md:absolute md:bottom-16 lg:bottom-12 xl:bottom-4 right-4">
+                        <Newsletters title={t("newsletter")}/>
+                    </div>
+
                 </div>
                 <ServiceModal
                     isOpen={modalOpen}

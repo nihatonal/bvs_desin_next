@@ -4,7 +4,10 @@ import { useTranslations } from "next-intl";
 import { toast } from './ui/toast';
 import axios from "axios";
 
-const Newsletters = () => {
+interface NewslettersProps {
+  title: string;
+}
+const Newsletters = ({ title }: NewslettersProps) => {
   const t = useTranslations("contact");
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,10 +41,10 @@ const Newsletters = () => {
     }, 1500);
   }
   return (
-    <form onSubmit={handleSubmit} className='flex items-end justify-between gap-4 p-6 mb-6 bg-gradient-to-l  from-bvs-lightPurple to-bvs-accent shadow rounded-lg'>
+    <form onSubmit={handleSubmit} className='shadow shadow-lg shadow-bvs-lightPurple/20 flex items-end justify-between gap-4 p-4 bg-gradient-to-l  from-bvs-lightPurple/10 to-bvs-accent/10 shadow rounded-lg'>
       <div className='w-full'>
         <label htmlFor="form_subject" className="text-white block text-xl font-semibold mb-4 mb-1">
-          {/* {t("subject")} */} Newsletter
+          {/* {t("subject")} */} {title}
         </label>
         <Input
           className='border-bvs-light text-bvs-light'

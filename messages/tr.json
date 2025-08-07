@@ -29,11 +29,12 @@
     "contact": "İletişim"
   },
   "about": {
-    "title": "Hakkımızda",
+    "title": "Bravix Creative Hakkında",
     "subtitle": "Nihat Önal tarafından kurulan",
     "role": "Web Geliştirme & Tasarım Stüdyosu",
-    "paragraph1": "Bravix Creative, 6+ yıllık deneyime sahip web geliştirici ve tasarımcı Nihat Önal tarafından kuruldu. Markaların dijital dünyada öne çıkmasına yardımcı olmak için modern ve yüksek performanslı dijital çözümler üretiyoruz.",
-    "paragraph2": "Fonksiyonellikle tasarım mükemmelliğini birleştiren, temiz, kullanıcı dostu ve görsel olarak etkileyici projeler geliştiriyoruz.",
+    "paragraph1": "Bravix Creative olarak, fikirleri dijital deneyimlere dönüştürme konusunda uzmanız. Modern bir tasarım ve yazılım stüdyosu olarak, temiz kod, güçlü görseller ve kullanıcı odaklı işlevselliği bir araya getiren özel çözümler sunuyoruz.",
+    "paragraph2": "Performans, kullanılabilirlik ve marka kimliğine odaklanarak, işletmelerin ve girişimcilerin bugünün rekabetçi ortamında öne çıkan etkileyici web siteleri ve dijital ürünler oluşturmasına yardımcı oluyoruz. İster yeni bir marka başlatıyor olun, ister mevcut birini geliştiriyor olun; her projeye açıklık, yaratıcılık ve tutarlılık getiriyoruz.",
+    "paragraph3": "Yenilikten ilham alan ve stratejik düşünceyle yönlendirilen Bravix Creative, kalıcı bir dijital varlık oluşturma konusunda sizin iş ortağınızdır.",
     "statistics": {
       "experience": "Yıllık Deneyim",
       "projects": "Tamamlanan Proje",
@@ -42,28 +43,33 @@
   },
   "services": {
     "title": "Hizmetler",
-    "subtitle": "Sizin için neler yapabilirim",
+    "subtitle": "Başarınıza Nasıl Katkı Sağlıyoruz",
     "webDev": "Web Geliştirme",
-    "webDevDesc": "React JS ve modern teknolojilerle oluşturulmuş özel web siteleri",
+    "ctaWebDev": "Projeleri Keşfet",
+    "webDevDesc": "React JS ve en güncel web teknolojileriyle geliştirilen hızlı, ölçeklenebilir ve duyarlı web siteleri — işletmenizin büyümesine uyumlu şekilde tasarlanır.",
     "ecommerce": "E-Ticaret Çözümleri",
-    "ecommerceDesc": "Güvenli ödeme geçitleri ve envanter yönetimi ile çevrimiçi mağazalar",
+    "ctaEcommerce": "Mağazamı Kur",
+    "ecommerceDesc": "Sorunsuz ödeme deneyimi, güvenli ödeme entegrasyonu ve akıllı stok yönetimiyle işletmenize özel güçlü e-ticaret altyapıları.",
     "uiDesign": "UI/UX Tasarımı",
-    "uiDesignDesc": "Figma ile tasarlanmış güzel, sezgisel arayüzler",
+    "ctaUIdesign": "Tasarım Sürecini Görüntüle",
+    "uiDesignDesc": "Kullanıcı öncelikli yaklaşımla oluşturulmuş sezgisel ve etkileyici arayüzler — wireframe'den yüksek çözünürlüklü prototiplere kadar, Figma ile hazırlanır.",
     "seo": "SEO Optimizasyonu",
-    "seoDesc": "Arama sıralamalarınızı ve çevrimiçi görünürlüğünüzü iyileştirin",
+    "ctaSEO": "Stratejiyi İncele",
+    "seoDesc": "Görünürlüğünüzü artırmak, organik trafiği çoğaltmak ve arama motorlarında rakiplerinizin önüne geçmek için sayfa içi ve teknik SEO stratejileri.",
     "mobileApp": "Mobil Uygulamalar",
     "mobileAppDesc": "Tüm cihazlarda çalışan çapraz platform mobil uygulamalar",
-    "maintenance": "Bakım",
-    "maintenanceDesc": "Sürekli web sitesi desteği, güncellemeler ve iyileştirmeler",
-    "learnMore": "Daha Fazla",
+    "maintenance": "Bakım Hizmeti",
+    "ctaMaintenance": "Destek Al",
+    "maintenanceDesc": "Web sitenizin hızlı, güvenli ve güncel kalması için sürekli bakım, performans takibi ve önleyici güncellemeler.",
+    "learnMore": "Daha Fazla Bilgi",
     "closeModal": "Kapat",
-    "process": "İşlem",
+    "process": "Süreç",
     "technologies": "Teknolojiler"
   },
   "serviceDetails": {
     "webDev": {
       "title": "Web Geliştirme",
-      "description": "React JS, HTML5 ve Tailwind CSS kullanarak özel, duyarlı web siteleri oluşturuyorum. Her site, belirli ihtiyaçlarınızı ve hedeflerinizi karşılamak için sıfırdan inşa edilir.",
+      "description": "React JS, HTMLBravix Creative olarak, React JS, HTML5 ve Tailwind CSS kullanarak özel, duyarlı web siteleri geliştiriyoruz. Her proje, benzersiz iş hedeflerinize uyacak şekilde titizlikle tasarlanmakta ve ölçülebilir sonuçlar sağlamaktadır.",
       "process": [
         "Gereksinim toplama",
         "Taslak ve tasarım",
@@ -82,7 +88,7 @@
     },
     "ecommerce": {
       "title": "E-Ticaret Çözümleri",
-      "description": "Güvenli ödeme işleme, envanter yönetimi ve ürünlerinizi sergilemek için kullanıcı dostu arayüzlerle eksiksiz çevrimiçi mağaza çözümleri.",
+      "description": "Güvenli ödeme sistemleri, kolay envanter yönetimi ve ürünlerinizi etkili şekilde sergileyen kullanıcı dostu arayüzlerle kapsamlı e-ticaret platformları sunuyoruz. Online satışlarınızı artırmayı hedefliyoruz.",
       "process": [
         "Mağaza planlama",
         "Ürün kataloğu kurulumu",
@@ -100,7 +106,7 @@
     },
     "uiDesign": {
       "title": "UI/UX Tasarımı",
-      "description": "Kullanıcı göz önünde bulundurularak tasarlanmış güzel, sezgisel arayüzler. Hem görsel açıdan çekici hem de kullanımı kolay deneyimler yaratmaya odaklanıyorum.",
+      "description": "Estetik açıdan çekici ve kullanımı kolay, kullanıcı odaklı arayüzler tasarlıyoruz. Kullanıcı araştırmasından prototiplemeye ve son teslimata kadar her adımda deneyimi iyileştirmeye odaklanıyoruz.",
       "process": [
         "Kullanıcı araştırması",
         "Taslak oluşturma",
@@ -118,7 +124,7 @@
     },
     "seo": {
       "title": "SEO Optimizasyonu",
-      "description": "İşletmenize özel kapsamlı SEO stratejileriyle web sitenizin arama motorlarındaki görünürlüğünü artırın.",
+      "description": "Web sitenizin arama motorlarındaki görünürlüğünü artırmak, organik trafiği yükseltmek ve sürdürülebilir iş büyümesi sağlamak için kapsamlı SEO stratejileri uyguluyoruz. Site denetimleri, anahtar kelime araştırmaları ve performans takibi gerçekleştiriyoruz.",
       "process": [
         "Site denetimi",
         "Anahtar kelime araştırması",
@@ -136,7 +142,7 @@
     },
     "mobileApp": {
       "title": "Mobil Uygulamalar",
-      "description": "Tüm cihazlarda sorunsuz bir kullanıcı deneyimi sağlayan çapraz platform mobil uygulamalar.",
+      "description": "Bravix Creative olarak, tüm cihazlarda sorunsuz ve etkileyici deneyimler sunan çapraz platform mobil uygulamalar geliştiriyoruz. Gereksinim belirlemeden tasarım, geliştirme, test ve uygulama mağazası yayınına kadar tüm süreci yönetiyoruz.",
       "process": [
         "Gereksinim tanımlama",
         "UI/UX tasarımı",
@@ -154,7 +160,7 @@
     },
     "maintenance": {
       "title": "Bakım",
-      "description": "Sitenizin güvenli, güncel ve optimal performans göstermesini sağlamak için sürekli web sitesi desteği.",
+      "description": "Web sitenizin güvenli, güncel ve optimal performansta kalmasını sağlamak için sürekli bakım hizmetleri sunuyoruz. Düzenli güncellemeler, güvenlik izleme, performans iyileştirmeleri, içerik yenileme ve teknik destek sağlıyoruz.",
       "process": [
         "Düzenli güncellemeler",
         "Güvenlik izleme",
@@ -172,8 +178,8 @@
     }
   },
   "portfolio": {
-    "title": "Portfolyom",
-    "subtitle": "Son projelerime göz atın ve sizin için neler yapabileceğimi görün",
+    "title": "Portföyümüz",
+    "subtitle": "Son projelerimizi inceleyerek, müşterilerimize başarı getiren yenilikçi çözümlerimizi keşfedebilirsiniz.",
     "all": "Tümü",
     "web-design": "Web Tasarımı",
     "web-development": "Web Geliştirme",
@@ -219,7 +225,7 @@
   },
   "cta": {
     "title": "Projenize Başlamaya Hazır mısınız?",
-    "subtitle": "Fikirlerinizi hayata geçirmek için benimle iletişime geçin. Birlikte harika bir şeyler yaratalım.",
+    "subtitle": "Fikirlerinizi hayata geçirmek için bizimle iletişime geçin. Birlikte harika bir şeyler yaratalım.",
     "button": "İletişime Geçin"
   },
   "contact": {
@@ -230,7 +236,7 @@
     "subject": "Konu",
     "message": "Mesajınız",
     "submit": "Mesaj Gönder",
-    "placeholderEmail":"Emailinizi yazınız",
+    "placeholderEmail": "Emailinizi yazınız",
     "submit_newsletter": "Gönder",
     "info": "İletişim Bilgileri",
     "address": "123 İş Caddesi, 100. Ofis, Şehir",
@@ -251,10 +257,11 @@
     "rights": "Tüm Hakları Saklıdır",
     "links": "Hızlı Bağlantılar",
     "services": "Hizmetler",
-    "legal": "Yasal",
+    "legal": "Yasal Bilgiler",
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları",
-    "cookies": "Çerez Politikası"
+    "cookies": "Çerez Politikası",
+    "newsletter": "Bülten"
   },
   "projectDetail": {
     "all": "Tüm Projeler",

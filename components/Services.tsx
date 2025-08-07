@@ -11,6 +11,7 @@ type Service = {
     id: string;
     title: string;
     description: string;
+    cta: string;
     icon: JSX.Element;
 };
 
@@ -26,6 +27,7 @@ export default function Services() {
         {
             id: "webDev",
             title: t("webDev"),
+            cta: t("ctaWebDev"),
             description: t("webDevDesc"),
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,6 +38,7 @@ export default function Services() {
         {
             id: "ecommerce",
             title: t("ecommerce"),
+            cta: t("ctaEcommerce"),
             description: t("ecommerceDesc"),
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,6 +49,7 @@ export default function Services() {
         {
             id: "uiDesign",
             title: t("uiDesign"),
+            cta: t("ctaUIdesign"),
             description: t("uiDesignDesc"),
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,6 +60,7 @@ export default function Services() {
         {
             id: "seo",
             title: t("seo"),
+            cta:t("ctaSEO"),
             description: t("seoDesc"),
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,6 +71,7 @@ export default function Services() {
         {
             id: "maintenance",
             title: t("maintenance"),
+            cta:t("ctaMaintenance"),
             description: t("maintenanceDesc"),
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -133,7 +139,7 @@ export default function Services() {
                                 boxShadow: "0 8px 20px rgba(0, 0, 0, 0.08)",
                                 transition: { duration: 0.3 }
                             }}
-                            className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                            className="relative bg-white p-6 pb-10 rounded-xl shadow-sm border border-gray-100"
                         >
                             <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-bvs-purple bg-opacity-10 text-bvs-purple mb-5">
                                 {service.icon}
@@ -144,9 +150,9 @@ export default function Services() {
 
                                 aria-label="service modal"
                                 onClick={() => openServiceModal(service.id)}
-                                className="text-bvs-purple hover:underline font-medium inline-flex items-center"
+                                className="absolute bottom-4 right-4 text-bvs-purple hover:underline font-medium inline-flex items-center"
                             >
-                                {t("learnMore")}
+                                {service.cta}
                                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                 </svg>

@@ -71,19 +71,15 @@ export default function AboutMe() {
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
-                            <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-                                {t("subtitle")}
-                            </h3>
-
                             <p className="text-gray-600 mb-6">{t("paragraph1")}</p>
                             <p className="text-gray-600 mb-10">{t("paragraph2")}</p>
-
+                            <p className="text-gray-600 mb-10">{t("paragraph3")}</p>
                             {/* Stats */}
                             <div className="grid grid-cols-3 gap-4 text-center">
                                 {statistics.map((stat, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-white p-4 rounded-lg shadow-sm"
+                                        className="bg-white p-4 rounded-lg shadow"
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                         transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
