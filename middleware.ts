@@ -4,6 +4,8 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ["/", "/(en|tr|ru)/:path*"],
+  matcher: [
+    // Apply middleware only to internationalized paths and exclude static files
+    "/((?!_next|favicon.ico|manifest.json|icons|robots.txt|sitemap.xml).*)",
+  ],
 };

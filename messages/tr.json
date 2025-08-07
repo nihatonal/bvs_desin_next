@@ -230,6 +230,7 @@
     "subject": "Konu",
     "message": "Mesajınız",
     "submit": "Mesaj Gönder",
+    "placeholderEmail":"Emailinizi yazınız",
     "submit_newsletter": "Gönder",
     "info": "İletişim Bilgileri",
     "address": "123 İş Caddesi, 100. Ofis, Şehir",

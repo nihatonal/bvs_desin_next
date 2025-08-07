@@ -45,7 +45,7 @@ const Newsletters = () => {
         </label>
         <Input
           className='border-bvs-light text-bvs-light'
-          placeholder='Emailiniz yaziniz'
+          placeholder={t("placeholderEmail")}
           id="form_subject"
           name="form_subject"
           value={email}

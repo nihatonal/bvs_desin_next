@@ -51,7 +51,6 @@ const Logo = ({
                       className="absolute -top-1 -right-8 object-cover rounded-xl"
                         priority
                         fetchPriority="high"
-                        placeholder="blur"
                     />
                 </h2>
 
