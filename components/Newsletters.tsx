@@ -3,9 +3,7 @@ import { Input } from './ui/input'
 import { useTranslations } from "next-intl";
 import { toast } from './ui/toast';
 import axios from "axios";
-interface FormData {
-  email: string;
-}
+
 const Newsletters = () => {
   const t = useTranslations("contact");
   const [email, setEmail] = useState("")

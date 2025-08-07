@@ -29,7 +29,7 @@ const Logo = ({
                 )}
                 onClick={() => scrollToHome("home")}
             >
-                Bvs-
+                Bravix
                 <span
                     className={cn(
                         "text-bvs-blue group-hover:text-bvs-accent hoverEffect",
