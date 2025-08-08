@@ -5,25 +5,14 @@ import { useRef } from "react";
 
 import Image from "next/image";
 import hero_image from "../public/images/stylish_realistic_web_designer_office__2.webp";
-import { ArrowRight, MessageSquare } from "lucide-react";
 import { handleMenuNavigation } from "@/utils/navigation";
 import { usePathname, useRouter } from "@/node_modules/next/navigation";
+import HeroButtons from "./HeroButtons";
 
 const Parallax = dynamic(
     () => import("react-scroll-parallax").then((mod) => mod.Parallax),
     { ssr: false }
 );
-
-interface HeroButtonsProps {
-    scrollToSection: (sectionId: string) => void;
-    t: (key: string) => string;
-}
-
-const sendGAEvent = (eventName: string, params: Record<string, any>) => {
-    if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("event", eventName, params);
-    }
-};
 
 export default function Hero(): JSX.Element {
     const router = useRouter();
@@ -37,11 +26,6 @@ export default function Hero(): JSX.Element {
             pathname,
             router
         });
-    };
-
-    const handleClick = (buttonName: string, sectionId: string) => {
-        sendGAEvent("click_hero_button", { button_name: buttonName });
-        scrollToSection(sectionId);
     };
 
     return (
@@ -66,22 +50,7 @@ export default function Hero(): JSX.Element {
                             {t("description")}
                         </p>
 
-                        <div className="grid grid-cols-2 lg:flex gap-4 pt-6">
-                            <button
-                                aria-label="portfolio button"
-                                onClick={() => handleClick("portfolio", "portfolio")}
-                                className="flex items-center justify-center gap-2 bg-bvs-accent hover:bg-bvs-purple py-2 px-4 text-white rounded-[8px]"
-                            >
-                                {t("cta_1")}<ArrowRight className="w-4 h-4" />
-                            </button>
-                            <button
-                                aria-label="contact button"
-                                onClick={() => handleClick("contact", "contact")}
-                                className="flex items-center justify-center gap-2 btn-outline py-2 px-4 text-bvs-accent border border-1 border-bvs-accent hover:bg-bvs-purple hover:text-white rounded-[8px]"
-                            >
-                                {t("cta_2")}<MessageSquare className="w-4 h-4" />
-                            </button>
-                        </div>
+                        <HeroButtons scrollToSection={scrollToSection} t={t} />
                     </div>
                     <div className="absolute inset-0 -z-10 overflow-hidden">
                         <div className="absolute top-0 right-[-4rem] w-80 h-80 bg-bvs-lightPurple rounded-full filter blur-3xl opacity-20"></div>
