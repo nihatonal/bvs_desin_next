@@ -1,21 +1,19 @@
-// app/analytics.tsx
 'use client';
 
-import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
-export default function Analytics() {
-    const pathname = usePathname();
+export function AnalyticsTracker() {
+  const pathname = usePathname();
 
-    useEffect(() => {
-        if (typeof window.gtag === 'function') {
-            window.gtag('event', 'page_view', {
-                page_path: pathname,
-                page_title: document.title,
-                screen_name: document.title,
-            });
-        }
-    }, [pathname]);
+  useEffect(() => {
+    const gtag = window.gtag || function () {};
+    gtag('event', 'page_view', {
+      page_path: pathname,
+      page_title: document.title,
+      screen_name: document.title,
+    });
+  }, [pathname]);
 
-    return null;
+  return null;
 }

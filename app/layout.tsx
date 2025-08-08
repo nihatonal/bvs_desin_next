@@ -21,15 +21,15 @@ export default function RootLayout({
                 <Script
                     id="google-analytics" strategy="afterInteractive">
                     {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-
-                        gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                            page_path: window.location.pathname,
-                            page_title: document.title,
-                            screen_name: document.title,
-                        });
+                       window.dataLayer = window.dataLayer || [];
+                       function gtag(){dataLayer.push(arguments);}
+                       gtag('js', new Date());
+           
+                       gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                         send_page_view: false,
+                         allow_google_signals: true,
+                         cookie_flags: 'SameSite=None;Secure'
+                       });
                     `}
                 </Script>
             </head>
