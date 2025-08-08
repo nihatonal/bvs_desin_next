@@ -14,6 +14,17 @@ const Parallax = dynamic(
     { ssr: false }
 );
 
+interface HeroButtonsProps {
+    scrollToSection: (sectionId: string) => void;
+    t: (key: string) => string;
+}
+
+const sendGAEvent = (eventName: string, params: Record<string, any>) => {
+    if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", eventName, params);
+    }
+};
+
 export default function Hero(): JSX.Element {
     const router = useRouter();
     const pathname = usePathname();
@@ -26,6 +37,11 @@ export default function Hero(): JSX.Element {
             pathname,
             router
         });
+    };
+
+    const handleClick = (buttonName: string, sectionId: string) => {
+        sendGAEvent("click_hero_button", { button_name: buttonName });
+        scrollToSection(sectionId);
     };
 
     return (
@@ -53,14 +69,14 @@ export default function Hero(): JSX.Element {
                         <div className="grid grid-cols-2 lg:flex gap-4 pt-6">
                             <button
                                 aria-label="portfolio button"
-                                onClick={() => scrollToSection("portfolio")}
+                                onClick={() => handleClick("portfolio", "portfolio")}
                                 className="flex items-center justify-center gap-2 bg-bvs-accent hover:bg-bvs-purple py-2 px-4 text-white rounded-[8px]"
                             >
                                 {t("cta_1")}<ArrowRight className="w-4 h-4" />
                             </button>
                             <button
                                 aria-label="contact button"
-                                onClick={() => scrollToSection("contact")}
+                                onClick={() => handleClick("contact", "contact")}
                                 className="flex items-center justify-center gap-2 btn-outline py-2 px-4 text-bvs-accent border border-1 border-bvs-accent hover:bg-bvs-purple hover:text-white rounded-[8px]"
                             >
                                 {t("cta_2")}<MessageSquare className="w-4 h-4" />
