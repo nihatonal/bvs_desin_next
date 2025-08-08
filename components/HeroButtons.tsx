@@ -6,7 +6,11 @@ interface HeroButtonsProps {
     t: (key: string) => string;
 }
 
-const sendGAEvent = (eventName: string, params: Record<string, any>) => {
+type GAEventParams = {
+    [key: string]: string | number | boolean;
+};
+
+const sendGAEvent = (eventName: string, params: GAEventParams) => {
     if (typeof window !== "undefined" && window.gtag) {
         window.gtag("event", eventName, params);
     }
