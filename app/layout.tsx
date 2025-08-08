@@ -12,11 +12,6 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <meta name="theme-color" content="#9F8CFD" />
                 <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-
-            </head>
-            <body>
-                {children}
-
                 {/* Google Analytics: gtag.js */}
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -32,8 +27,10 @@ export default function RootLayout({
                     page_path: window.location.pathname,
                     });
                     `}
-
                 </Script>
+            </head>
+            <body>
+                {children}
             </body>
         </html>
     );
