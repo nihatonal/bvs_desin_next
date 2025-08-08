@@ -1,6 +1,7 @@
 import "./globals.css";
 import Script from "next/script";
-import Analytics from "./analytics";
+import { AnalyticsTracker } from "./AnalyticsTracker";
+
 export default function RootLayout({
     children,
 }: {
@@ -35,7 +36,7 @@ export default function RootLayout({
             </head>
             <body>
                 {children}
-                <Analytics />
+                <AnalyticsTracker />
             </body>
         </html>
     );
