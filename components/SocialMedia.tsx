@@ -8,7 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from '@/node_modules/next/link';
 import { Linkedin, Instagram, Github } from "lucide-react";
-
+import { FaWhatsapp } from "react-icons/fa";
 const BehanceIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,13 +29,18 @@ interface Props {
 
 const socialLink = [
     {
+        title: "Whatsapp",
+        href: "https://wa.me/79099316670",
+        icon: <FaWhatsapp  className={"h-6 w-6"}/>,
+    },
+    {
         title: "Instagram",
         href: "https://www.instagram.com/bvsdesign_",
         icon: <Instagram size={24} />,
     },
     {
         title: "Behance",
-        href: "https://www.behance.net/nihatna",
+        href: "https://www.behance.net/nihatnal",
         icon: <BehanceIcon width={24} height={24} />,
     },
     {

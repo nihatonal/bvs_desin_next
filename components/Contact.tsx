@@ -61,17 +61,15 @@ const Contact: React.FC = () => {
             alert("Bir hata oluştu.");
         }
 
-        setTimeout(() => {
-            toast({
-                title: t("submitSuccessTitle", { default: "Message sent!" }),
-                description: t("submitSuccessDesc", {
-                    default: "Thanks for reaching out. I'll get back to you soon.",
-                }),
-            });
-            setFormData({ name: "", email: "", phone: "", form_subject: "", message: "" });
-            setPlanInput("");
-            setIsSubmitting(false);
-        }, 1500);
+        toast({
+            title: t("submitSuccessTitle", { default: "Message sent!" }),
+            description: t("submitSuccessDesc", {
+                default: "Thanks for reaching out. I'll get back to you soon.",
+            }),
+        });
+        setFormData({ name: "", email: "", phone: "", form_subject: "", message: "" });
+        setPlanInput("");
+        setIsSubmitting(false);
     };
 
     return (
