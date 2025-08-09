@@ -107,7 +107,7 @@ export const portfolioData: Record<string, Project[]> = {
       title: "The Glass Hut – Cabin Website",
       viewLiveSite: "Demo",
       liveUrl: "https://theglasshut.web.app/",
-      client: "The Glass Hut",
+      client: "Demo Project",
       type: "web-development",
       category: "Web Development",
       description:
@@ -146,7 +146,7 @@ export const portfolioData: Record<string, Project[]> = {
       title: "Mindfulness App Landing Page",
       viewLiveSite: "Demo",
       liveUrl: "https://zenmind-breathe.netlify.app/",
-      client: "ZenMind",
+      client: "Demo Project",
       type: "web-design",
       category: "Landing Page Design",
       description:
@@ -186,7 +186,7 @@ export const portfolioData: Record<string, Project[]> = {
       title: "Creator Flow Dashboard UI",
       viewLiveSite: "Demo",
       liveUrl: "https://creator-flow-dashboard.netlify.app/",
-      client: "Internal Concept",
+      client: "Demo Project",
       type: "ui-ux",
       category: "Dashboard UI/UX ",
       description:
@@ -225,7 +225,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Live Site",
       liveUrl: "https://quick-bite-fastfood.netlify.app/",
       title: "Fast Food Restaurant",
-      client: "Quick Bite",
+      client: "Demo Project",
       type: "web-application",
       category: "Web Application + E-commerce",
       description:
@@ -344,7 +344,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Demo",
       liveUrl: "https://theglasshut.web.app/",
       title: "The Glass Hut – Kabin Tanıtım Sitesi",
-      client: "The Glass Hut",
+      client: "Kişisel Proje",
       type: "web-development",
       category: "Web Geliştirme",
       description:
@@ -383,7 +383,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Demo",
       liveUrl: "https://theglasshut.web.app/",
       title: "Mindfulness Uygulama Tanıtım Sitesi",
-      client: "ZenMind",
+      client: "Kişisel Proje",
       type: "web-design",
       category: "Açılış Sayfası Tasarımı",
       description:
@@ -422,7 +422,7 @@ export const portfolioData: Record<string, Project[]> = {
       title: "Yaratıcı Akış Paneli Arayüzü",
       viewLiveSite: "Demo",
       liveUrl: "https://creator-flow-dashboard.netlify.app/",
-      client: "İç Konsept",
+      client: "Kişisel Proje",
       type: "ui-ux",
       category: "Panel Arayüzü (UI/UX)",
       description:
@@ -461,7 +461,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Canlı Site",
       liveUrl: "https://quick-bite-fastfood.netlify.app/",
       title: "Fast Food Restoran Web Sitesi",
-      client: "Quick Bite",
+      client: "Kişisel Proje",
       type: "web-application",
       category: "Web Tasarımı + E-ticaret",
       description:
@@ -579,7 +579,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Демо",
       liveUrl: "https://theglasshut.web.app/",
       title: "The Glass Hut – Сайт для стеклянного домика",
-      client: "The Glass Hut",
+      client: "Демо-проект",
       type: "web-development",
       category: "Веб-разработка",
       description:
@@ -618,7 +618,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Демо",
       liveUrl: "https://zenmind-breathe.netlify.app/",
       title: "Целевая страница приложения для медитации",
-      client: "ZenMind",
+      client: "Демо-проект",
       type: "web-design",
       category: "Дизайн лендинга",
       description:
@@ -657,7 +657,7 @@ export const portfolioData: Record<string, Project[]> = {
       title: "Панель управления Creator Flow UI",
       viewLiveSite: "Демо",
       liveUrl: "https://creator-flow-dashboard.netlify.app/",
-      client: "Внутренний концепт",
+      client: "Демо-проект",
       type: "Панель интерфейса (UI/UX)",
       category: "Панель управления",
       description:
@@ -696,7 +696,7 @@ export const portfolioData: Record<string, Project[]> = {
       viewLiveSite: "Сайт вживую",
       liveUrl: "https://quick-bite-fastfood.netlify.app/",
       title: "Сайт фастфуд-ресторана",
-      client: "Quick Bite",
+      client: "Демо-проект",
       type: "web-application",
       category: "Веб-дизайн + Электронная коммерция",
       description:

@@ -248,9 +248,10 @@
     "workHours": "09:00 - 18:00, Pazartesi - Cumartesi",
     "letsMeet": "Bağlantıda Kalalım",
     "letsMeetSub": "En yeni projelerimi ve güncellemelerimi görmek için beni sosyal medyada takip edin",
-    "processing": "Sending",
-    "submitSuccessTitle": "We got your message!",
-    "submitSuccessDesc": "description"
+    "processing": "Gönderiliyor",
+    "submitSuccessTitle": "Mesajınızı aldık!",
+    "submitSuccessDesc": "açıklama",
+    "status_link": "Sayfa yakında geliyor."
   },
   "footer": {
     "title": "Dünyanın dört bir yanındaki işletmeler ve bireyler için etkileyici web deneyimleri oluşturuyorum.",

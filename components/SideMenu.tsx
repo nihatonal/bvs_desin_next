@@ -46,7 +46,7 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
     border-r border-r-bvs-lightGreen flex flex-col gap-6 
     '>
             <div className='flex items-center justify-between gap-5'>
-                <Logo className="text-bvs-lightPurple hover:text-bvs-lightPurple" spanDesign="text-white group-hover:text-bvs-lightPurple" />
+                <Logo className={'text-white'} />
                 <button onClick={onClose}
                     aria-label="close modal"
                     className="hover:text-bvs-lightGreen hoverEffect">

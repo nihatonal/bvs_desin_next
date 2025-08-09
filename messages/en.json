@@ -250,7 +250,8 @@
     "letsMeetSub": "Follow me on social media to see my latest projects and updates",
     "processing": "Sending",
     "submitSuccessTitle": "We got your message!",
-    "submitSuccessDesc": "description"
+    "submitSuccessDesc": "description",
+    "status_link":"Page coming soon."
   },
   "footer": {
     "title": "Creating beautiful web experiences for businesses and individuals around the world.",

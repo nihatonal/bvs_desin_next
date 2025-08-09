@@ -24,6 +24,7 @@ interface Props {
     className?: string;
     iconClassName?: string;
     tooltipClassName?: string;
+    status_link?: string;
 }
 
 
@@ -31,35 +32,41 @@ const socialLink = [
     {
         title: "Whatsapp",
         href: "https://wa.me/79099316670",
-        icon: <FaWhatsapp  className={"h-6 w-6"}/>,
+        icon: <FaWhatsapp className={"h-6 w-6"} />,
+        status: true
     },
     {
         title: "Instagram",
         href: "https://www.instagram.com/bravixcreative",
         icon: <Instagram size={24} />,
-    },
+        status: true
+    }
+    ,
     {
         title: "Behance",
         href: "https://www.behance.net/nihatnal",
         icon: <BehanceIcon width={24} height={24} />,
+        status: false
     },
     {
         title: "Linkedin",
         href: "https://www.linkedin.com/in/nihat-onal-82a4412a0",
         icon: <Linkedin size={24} />,
+        status: false
     },
     {
         title: "GitHub",
         href: "https://github.com/nihatonal",
         icon: <Github size={24} />,
+        status: false
     }
 ];
 
-const SocialMedia = ({ className, iconClassName, tooltipClassName }: Props) => {
+const SocialMedia = ({ className, iconClassName, tooltipClassName, status_link }: Props) => {
     return (
         <TooltipProvider>
             <div className={cn("flex items-center gap-3.5 mx-auto", className)}>
-                {socialLink?.map((item) => (
+                {socialLink?.filter((el) => el.status === true).map((item) => (
                     <Tooltip key={item?.title}>
                         <TooltipTrigger asChild>
                             <Link
@@ -75,6 +82,32 @@ const SocialMedia = ({ className, iconClassName, tooltipClassName }: Props) => {
                             >
                                 {item?.icon}
                             </Link>
+                        </TooltipTrigger>
+                        <TooltipContent
+                            className={cn(
+                                "bg-white text-dvs-darkColor font-semibold",
+                                tooltipClassName
+                            )}
+                        >
+                            {item?.title}
+                        </TooltipContent>
+                    </Tooltip>
+                ))}
+                {socialLink?.filter((el) => el.status === false).map((item) => (
+                    <Tooltip key={item?.title}>
+                        <TooltipTrigger asChild>
+                            <button
+                                aria-label="social link"
+                                key={item?.title}
+                                rel="noopener noreferrer"
+                                className={cn(
+                                    "p-2 border rounded-full transition",
+                                    iconClassName
+                                )}
+                                onClick={() => alert(status_link)}
+                            >
+                                {item?.icon}
+                            </button>
                         </TooltipTrigger>
                         <TooltipContent
                             className={cn(

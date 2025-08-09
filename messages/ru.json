@@ -248,9 +248,10 @@
     "workHours": "09:00 - 18:00, Пн - Су",
     "letsMeet": "Давайте свяжемся",
     "letsMeetSub": "Следите за мной в социальных сетях, чтобы видеть мои последние проекты и обновления",
-    "processing": "Sending",
-    "submitSuccessTitle": "We got your message!",
-    "submitSuccessDesc": "description"
+    "processing": "Отправка",
+    "submitSuccessTitle": "Мы получили ваше сообщение!",
+    "submitSuccessDesc": "описание",
+    "status_link": "Страница скоро будет доступна."
   },
   "footer": {
     "title": "Создаю красивые веб-решения для бизнеса и частных клиентов по всему миру.",

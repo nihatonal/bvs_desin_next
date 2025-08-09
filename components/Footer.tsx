@@ -22,6 +22,7 @@ export default function Footer() {
     const pathname = usePathname();
     const router = useRouter();
     const t = useTranslations("footer");
+    const con = useTranslations("contact")
     const nav = useTranslations("nav");
     const ser = useTranslations("services")
     const currentYear = new Date().getFullYear();
@@ -84,7 +85,9 @@ export default function Footer() {
 
                         </div>
                         <p className="text-gray-300 mb-4">{t("title")}</p>
-                        <SocialMedia iconClassName="text-white hover:bg-white/20 backdrop-blur p-2 rounded-full transition-all hover:scale-105 duration-200" />
+                        <SocialMedia
+                            status_link={con("status_link")}
+                            iconClassName="text-white hover:bg-white/20 backdrop-blur p-2 rounded-full transition-all hover:scale-105 duration-200" />
                     </div>
 
                     {/* Quick Links */}
@@ -129,7 +132,7 @@ export default function Footer() {
                         <FooterLegalLinks />
                     </div>
                     <div className="md:absolute md:bottom-16 lg:bottom-12 xl:bottom-4 right-4">
-                        <Newsletters title={t("newsletter")}/>
+                        <Newsletters title={t("newsletter")} />
                     </div>
 
                 </div>
