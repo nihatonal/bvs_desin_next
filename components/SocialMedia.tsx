@@ -35,7 +35,7 @@ const socialLink = [
     },
     {
         title: "Instagram",
-        href: "https://www.instagram.com/bvsdesign_",
+        href: "https://www.instagram.com/bravixcreative",
         icon: <Instagram size={24} />,
     },
     {
