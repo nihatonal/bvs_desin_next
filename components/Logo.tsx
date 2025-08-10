@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "@/node_modules/next/navigation";
 import { handleMenuNavigation } from "@/utils/navigation";
 
 import React from "react";
-import logo from '../assets/webp/bravix_x.png'
+import logo from '../assets/webp/bravix.png'
 const Logo = ({
     className,
     spanDesign,
@@ -22,8 +22,7 @@ const Logo = ({
         });
     };
     return (
-        <button aria-label="home page" className="flex text-bvs-logoText">
-
+        <div className="flex text-bvs-logoText">
             <div className="group relative grid grid-cols-[1fr_2fr]">
                 <Image
                     src={logo}
@@ -35,30 +34,27 @@ const Logo = ({
                     priority
                     fetchPriority="high"
                 />
-                <h2
+                <button
+                    aria-label="logo_button"
                     className={cn(
-                        "flex flex-col text-2xl leading-none text-bvs-logoText font-black tracking-wider uppercase group-hover:text-bvs-logoText/80 hoverEffect group font-sans",
+                        "flex flex-col text-2xl leading-none text-bvs-logoText font-black tracking-wider uppercase hoverEffect group font-sans relative overflow-hidden shine-effect",
                         className
                     )}
                     onClick={() => scrollToHome("home")}
                 >
-                    Bravix
+                    BRAVIX
                     <span
                         className={cn(
-                            "lowercase text-sm font-medium group-hover:text-bvs-accent hoverEffect",
+                            "lowercase text-sm font-medium hoverEffect",
                             spanDesign
                         )}
                     >
-                        Creative
+                        creative
                     </span>
-
-
-                </h2>
-
-
+                </button>
             </div>
 
-        </button>
+        </div>
     );
 };
 
