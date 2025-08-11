@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.bravixcreative.com
+
+# Sitemaps
+Sitemap: https://www.bravixcreative.com/sitemap.xml
