@@ -1,4 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://www.bravixcreative.com/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Ana sayfa -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/"/>
+  </url>
+
+  <!-- Legal: Terms -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/hizmet-sartlari</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/hizmet-sartlari"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/usloviya-obsluzhivaniya"/>
+  </url>
+
+  <!-- Legal: Privacy -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/gizlilik-politikasi</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/gizlilik-politikasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/politika-konfid"/>
+  </url>
+
+  <!-- Legal: Cookie -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/cerez-politikasi</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/cerez-politikasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/politika-cookie"/>
+  </url>
+
+  <!-- Portfolio -->
+  <!-- 1001 -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/project/apart-otel-web-sitesi-ve-yonetici-paneli/1001</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/project/apart-otel-web-sitesi-ve-yonetici-paneli/1001"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/project/apart-hotel-website-and-admin-panel/1001"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/project/veb-sayt-apart-otelya-i-administrativnaya-panel/1001"/>
+  </url>
+
+  <!-- 1002 -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/project/bag-yatirim-web-sitesi/1002</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/project/bag-yatirim-web-sitesi/1002"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/project/vineyard-investment-website/1002"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/project/veb-sayt-investiciy-v-vinodelni/1002"/>
+  </url>
+
+  <!-- 1003 -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/project/the-glass-hut-kabin-tanitim-sitesi/1003</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/project/the-glass-hut-kabin-tanitim-sitesi/1003"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/project/the-glass-hut-cabin-website/1003"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/project/the-glass-hut-sayt-dlya-steklyannogo-domika/1003"/>
+  </url>
+
+  <!-- 1004 -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/project/mindfulness-uygulama-tanitim-sitesi/1004</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/project/mindfulness-uygulama-tanitim-sitesi/1004"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/project/mindfulness-app-landing-page/1004"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/project/celevaya-stranica-prilozheniya-dlya-meditacii/1004"/>
+  </url>
+
+  <!-- 1005 -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/project/yaratici-akis-paneli-arayuzu/1005</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/project/yaratici-akis-paneli-arayuzu/1005"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/project/creator-flow-dashboard-ui/1005"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/project/panel-upravleniya-creator-flow-ui/1005"/>
+  </url>
+
+  <!-- 1006 -->
+  <url>
+    <loc>https://www.bravixcreative.com/tr/project/fast-food-restoran-web-sitesi/1006</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/project/fast-food-restoran-web-sitesi/1006"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/project/fast-food-restaurant/1006"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/project/sayt-fastfud-restorana/1006"/>
+  </url>
+
+</urlset>
