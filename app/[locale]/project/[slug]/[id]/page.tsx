@@ -20,16 +20,19 @@ const langs = ['tr', 'en', 'ru'];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, id } = await params;
-  const project = getProjectById(id, locale); // Eğer id numara ise Number(id) yap
+  const project = getProjectById(id, locale);
 
   if (!project) {
     return { title: 'Project Not Found' };
   }
 
-  const path = `/project/${project.slug}/${id}`;
-  const canonical = `${siteUrl}/${locale}${path}`;
+  const canonical = `${siteUrl}/${locale}/project/${project.slug}/${id}`;
+
   const alternates = Object.fromEntries(
-    langs.map((lng) => [lng, `${siteUrl}/${lng}${path}`])
+    langs.map((lng) => {
+      const proj = getProjectById(id, lng); // Her dil için slug çekiliyor
+      return [lng, `${siteUrl}/${lng}/project/${proj.slug}/${id}`];
+    })
   );
 
   return {
@@ -39,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical,
       languages: {
         ...alternates,
-        'x-default': `${siteUrl}/en${path}`, // default dil
+        'x-default': alternates['en'],
       },
     },
     openGraph: {
@@ -56,6 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+
 
 export default async function ProjectPage({ params }: Props) {
   const { locale, id } = await params;
