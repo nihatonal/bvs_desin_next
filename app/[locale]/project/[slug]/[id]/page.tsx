@@ -15,6 +15,7 @@ type Project = {
   images: string[];
 };
 
+
 const siteUrl = 'https://www.bravixcreative.com';
 const langs = ['tr', 'en', 'ru'];
 
@@ -28,12 +29,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonical = `${siteUrl}/${locale}/project/${project.slug}/${id}`;
 
-  const alternates = Object.fromEntries(
-    langs.map((lng) => {
-      const proj = getProjectById(id, lng); // Her dil için slug çekiliyor
+  const alternatesEntries = langs
+    .map((lng) => {
+      const proj = getProjectById(id, lng);
+      if (!proj) return null;
       return [lng, `${siteUrl}/${lng}/project/${proj.slug}/${id}`];
     })
-  );
+    .filter(Boolean) as [string, string][]; // TS: kesinlikle [string, string] olduğu garanti
+
+  const alternates = Object.fromEntries(alternatesEntries);
 
   return {
     title: `${project.title} | Bravix Creative`,
@@ -42,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical,
       languages: {
         ...alternates,
-        'x-default': alternates['en'],
+        'x-default': alternates['en'] ?? canonical, // EN yoksa canonical kullan
       },
     },
     openGraph: {
@@ -59,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+
 
 
 export default async function ProjectPage({ params }: Props) {
