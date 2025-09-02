@@ -14,6 +14,26 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <meta name="theme-color" content="#9F8CFD" />
                 <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+                <Script
+                    id="organization-schema"
+                    type="application/ld+json"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "Bravix Creative",
+                            "url": "https://www.bravixcreative.com",
+                            "logo": "https://www.bravixcreative.com/bravix.png",
+                            "sameAs": [
+                                "https://www.instagram.com/bravixcreative"
+                            ],
+                            "description": "Bravix Creative, yaratıcı dijital çözümler sunan web tasarım ve geliştirme ajansıdır."
+                        }),
+                    }}
+                />
+
+
                 {/* Google Analytics: gtag.js */}
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -33,6 +53,7 @@ export default function RootLayout({
                        });
                     `}
                 </Script>
+
             </head>
             <body>
                 {children}

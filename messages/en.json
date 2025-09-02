@@ -1,8 +1,8 @@
 {
   "metadata": {
     "home": {
-      "title": "Bravix Creative | Web Developer & Designer",
-      "description": "Experienced web developer & designer creating fast, responsive and user-friendly websites."
+      "title": "Bravix Creative | Creative Digital Agency & Web Development",
+      "description": "Bravix Creative is a digital agency and professional web development studio offering custom creative solutions for your brand."
     },
     "projects": {
       "title": "Services | Bravix Creative",
@@ -251,7 +251,7 @@
     "processing": "Sending",
     "submitSuccessTitle": "We got your message!",
     "submitSuccessDesc": "description",
-    "status_link":"Page coming soon."
+    "status_link": "Page coming soon."
   },
   "footer": {
     "title": "Creating beautiful web experiences for businesses and individuals around the world.",

@@ -4,6 +4,14 @@
 
   <!-- Ana sayfa -->
   <url>
+    <loc>https://www.bravixcreative.com/</loc>
+    <lastmod>2025-08-13T09:55:00+03:00</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.bravixcreative.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bravixcreative.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.bravixcreative.com/ru/"/>
+  </url>
+  <url>
     <loc>https://www.bravixcreative.com/tr/</loc>
     <lastmod>2025-08-13T09:55:00+03:00</lastmod>
     <priority>0.8</priority>

@@ -13,7 +13,7 @@ export async function generateMetadata(
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata.home" });
 
-  const baseUrl = "https://seninsiten.com";
+  const baseUrl = "https://www.bravixcreative.com";
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
