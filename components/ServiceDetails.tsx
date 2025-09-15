@@ -12,18 +12,14 @@ interface Service {
   description: string;
   cta: string;
   icon?: ReactNode;
-  process: string[];
-  technologies: string[];
-  detailedDescription: string;
-  benefits: string[];
-  useCases: string[];
-  faq: { question: string; answer: string }[];
-  relatedProjects: { title: string; url: string }[];
-  blogPosts: { title: string; url: string }[];
-  heroImage: {
-    src: string;
-    alt: string;
-  };
+  process?: string[];
+  technologies?: string[];
+  detailedDescription?: string;
+  benefits?: string[];
+  useCases?: string[];
+  faq?: { question: string; answer: string }[];
+  relatedProjects?: { title: string; url: string }[];
+  blogPosts?: { title: string; url: string }[];
   idealFor?: string[];
   pricingModel?: string;
   commonMistakes?: string[];
@@ -115,7 +111,7 @@ export default function ServiceDetails({ service }: ServiceDetailsClientProps) {
       {/* Process Section */}
       <Section title={t("process")}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {service.process.map((step, idx) => (
+          {service.process?.map((step, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
@@ -136,7 +132,7 @@ export default function ServiceDetails({ service }: ServiceDetailsClientProps) {
       {/* Technologies Section */}
       <Section title={t("technologies")}>
         <div className="flex flex-wrap gap-4">
-          {service.technologies.map((tech, idx) => (
+          {service.technologies?.map((tech, idx) => (
             <motion.span
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -154,7 +150,7 @@ export default function ServiceDetails({ service }: ServiceDetailsClientProps) {
       {/* Benefits Section */}
       <Section title={t("benefits")}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
-          {service.benefits.map((benefit, idx) => (
+          {service.benefits?.map((benefit, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 10 }}
@@ -172,7 +168,7 @@ export default function ServiceDetails({ service }: ServiceDetailsClientProps) {
       {/* Use Cases Section */}
       <Section title={t("useCases")}>
         <div className="flex flex-wrap gap-2">
-          {service.useCases.map((useCase, idx) => (
+          {service.useCases?.map((useCase, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -222,7 +218,7 @@ export default function ServiceDetails({ service }: ServiceDetailsClientProps) {
       {/* FAQ Section */}
       <Section title={t("faq")}>
         <div className="space-y-6">
-          {service.faq.map((item, idx) => (
+          {service.faq?.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}

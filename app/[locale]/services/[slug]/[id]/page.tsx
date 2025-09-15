@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+//import { ReactNode } from "react";
 import { notFound } from 'next/navigation';
 // import type { Metadata } from 'next';
-import { getServiceById, getAllServices } from '@/lib/serviceUtil';
+import { getServiceById } from '@/lib/serviceUtil';
 import ServiceDetailsWrapper from '@/components/ServiceDetailsWrapper';
 import type { Metadata } from 'next';
 
@@ -9,32 +9,32 @@ type Props = {
   params: Promise<{ locale: string; slug: string; id: string }>;
 };
 
-type Service = {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  cta: string;
-  icon?: ReactNode;
-  process: string[];
-  technologies: string[];
-  detailedDescription: string;
-  benefits: string[];
-  useCases: string[];
-  faq: { question: string; answer: string }[];
-  relatedProjects: { title: string; url: string }[];
-  blogPosts: { title: string; url: string }[];
-  idealFor?: string[];
-  pricingModel?: string;
-  commonMistakes?: string[];
-  performanceMetrics?: string[];
-  heroImageUrl?: string;
-  keywords?: string[];
-  meta?: {
-    title: string;
-    description: string;
-  };
-};
+// type Service = {
+//   id: string;
+//   slug: string;
+//   title: string;
+//   description: string;
+//   cta: string;
+//   icon?: ReactNode;
+//   process: string[];
+//   technologies: string[];
+//   detailedDescription: string;
+//   benefits: string[];
+//   useCases: string[];
+//   faq: { question: string; answer: string }[];
+//   relatedProjects: { title: string; url: string }[];
+//   blogPosts: { title: string; url: string }[];
+//   idealFor?: string[];
+//   pricingModel?: string;
+//   commonMistakes?: string[];
+//   performanceMetrics?: string[];
+//   heroImageUrl?: string;
+//   keywords?: string[];
+//   meta?: {
+//     title: string;
+//     description: string;
+//   };
+// };
 
 const siteUrl = 'https://www.bravixcreative.com';
 const langs = ['tr', 'en', 'ru'];
@@ -95,19 +95,19 @@ export default async function ServicePage({ params }: Props) {
   return <ServiceDetailsWrapper service={service} />;
 }
 
-export async function generateStaticParams(): Promise<Array<{ locale: string; slug: string; id: string }>> {
-  const services: Service[] = getAllServices();
-  const paths: Array<{ locale: string; slug: string; id: string }> = [];
+// export async function generateStaticParams(): Promise<Array<{ locale: string; slug: string; id: string }>> {
+//   const services: Service[] = getAllServices();
+//   const paths: Array<{ locale: string; slug: string; id: string }> = [];
 
-  services.forEach((service) => {
-    langs.forEach((lng) => {
-      paths.push({
-        locale: lng,
-        slug: service.slug,
-        id: service.id.toString(),
-      });
-    });
-  });
+//   services.forEach((service) => {
+//     langs.forEach((lng) => {
+//       paths.push({
+//         locale: lng,
+//         slug: service.slug,
+//         id: service.id.toString(),
+//       });
+//     });
+//   });
 
-  return paths;
-}
+//   return paths;
+// }

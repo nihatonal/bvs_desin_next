@@ -6,12 +6,12 @@ export type Service = {
   description: string;
   cta: string;
   icon?: ReactNode;
-  process: string[];
-  technologies: string[];
-  detailedDescription: string;
-  benefits: string[];
-  useCases: string[];
-  faq: { question: string; answer: string }[];
+  process?: string[];
+  technologies?: string[];
+  detailedDescription?: string;
+  benefits?: string[];
+  useCases?: string[];
+  faq?: { question: string; answer: string }[];
   relatedProjects?: { title: string; url: string }[];
   blogPosts?: { title: string; url: string }[];
   idealFor?: string[];
@@ -741,63 +741,6 @@ export const ServiceData: Record<string, Service[]> = {
     },
     {
       id: "2005",
-      slug: "mobil-uygulamalar",
-      title: "Mobil Uygulamalar",
-      description:
-        "Tüm cihazlarda sorunsuz kullanıcı deneyimi sağlayan mobil uygulamalar.",
-      cta: "Uygulamamı Kur",
-      process: [
-        "Gereksinim tanımlama",
-        "UI/UX tasarımı",
-        "Geliştirme",
-        "Test",
-        "App store başvurusu",
-        "Bakım",
-      ],
-      technologies: [
-        "React Native",
-        "Native API'lar",
-        "App store dağıtımı",
-        "Çapraz platform araçları",
-      ],
-      detailedDescription:
-        "iOS ve Android için yüksek kaliteli mobil uygulamalar geliştiriyoruz. Performans ve kullanılabilirlik açısından optimize edilmiştir.",
-      benefits: [
-        "Çapraz platform uyumluluğu",
-        "Sorunsuz UX",
-        "Yüksek performans",
-        "App store uyumluluğu",
-      ],
-      useCases: [
-        "iOS ve Android uygulamaları",
-        "Kurumsal uygulamalar",
-        "E-ticaret uygulamaları",
-        "Araç uygulamaları",
-      ],
-      faq: [
-        {
-          question: "Hangi platformlar için geliştiriyorsunuz?",
-          answer: "iOS ve Android, React Native veya native teknolojiler ile.",
-        },
-        {
-          question: "App store başvurusunu siz mi yapıyorsunuz?",
-          answer: "Evet, tüm başvuru sürecini yönetiyoruz.",
-        },
-      ],
-      relatedProjects: [
-        { title: "Seyahat Uygulaması", url: "/projects/travel-app" },
-        { title: "Fitness Uygulaması", url: "/projects/fitness-app" },
-      ],
-      blogPosts: [
-        {
-          title: "Cross-Platform vs Native Uygulamalar",
-          url: "/blog/cross-vs-native",
-        },
-        { title: "Mobil UX İpuçları", url: "/blog/mobile-ux-tips" },
-      ],
-    },
-    {
-      id: "2006",
       slug: "bakim",
       title: "Bakım",
       description:
@@ -1139,67 +1082,6 @@ export const ServiceData: Record<string, Service[]> = {
     },
     {
       id: "2005",
-      slug: "mobilnye-prilozheniya",
-      title: "Мобильные приложения",
-      description:
-        "Кроссплатформенные мобильные приложения с бесшовным пользовательским опытом.",
-      cta: "Создать приложение",
-      process: [
-        "Определение требований",
-        "UI/UX дизайн",
-        "Разработка",
-        "Тестирование",
-        "Публикация в App Store",
-        "Обслуживание",
-      ],
-      technologies: [
-        "React Native",
-        "Native API",
-        "Публикация в App Store",
-        "Кроссплатформенные инструменты",
-      ],
-      detailedDescription:
-        "Разрабатываем высококачественные мобильные приложения для iOS и Android с использованием кроссплатформенных или нативных технологий, оптимизированные по производительности и удобству использования.",
-      benefits: [
-        "Кроссплатформенная совместимость",
-        "Плавный UX",
-        "Высокая производительность",
-        "Готовность к публикации в App Store",
-      ],
-      useCases: [
-        "iOS и Android приложения",
-        "Внутренние бизнес-приложения",
-        "E-commerce приложения",
-        "Утилитарные приложения",
-      ],
-      faq: [
-        {
-          question: "Для каких платформ вы разрабатываете?",
-          answer:
-            "iOS и Android, используя React Native или нативные технологии.",
-        },
-        {
-          question: "Вы занимаетесь публикацией в App Store?",
-          answer: "Да, управляем всем процессом публикации.",
-        },
-      ],
-      relatedProjects: [
-        { title: "Приложение для путешествий", url: "/projects/travel-app" },
-        { title: "Фитнес-приложение", url: "/projects/fitness-app" },
-      ],
-      blogPosts: [
-        {
-          title: "Cross-Platform vs Native Apps",
-          url: "/blog/cross-vs-native",
-        },
-        {
-          title: "Советы по UX мобильных приложений",
-          url: "/blog/mobile-ux-tips",
-        },
-      ],
-    },
-    {
-      id: "2006",
       slug: "tekhnicheskoe-obsluzhivanie",
       title: "Техническое обслуживание",
       description: "Постоянная поддержка и обновления ваших цифровых платформ.",

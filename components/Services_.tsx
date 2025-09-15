@@ -4,15 +4,34 @@ import { useTranslations } from "next-intl";
 import { motion, useInView, Easing } from "framer-motion";
 import { useState, useRef } from "react";
 import ServiceModal from "./ServiceModal";
-
+import { ReactNode } from "react";
 import { useLocale } from "next-intl";
 
 type Service = {
     id: string;
-    title: string;
-    description: string;
-    cta: string;
-    icon: JSX.Element;
+    slug?: string;
+    title?: string;
+    description?: string;
+    cta?: string;
+    icon?: ReactNode;
+    process?: string[];
+    technologies?: string[];
+    detailedDescription?: string;
+    benefits?: string[];
+    useCases?: string[];
+    faq?: { question: string; answer: string }[];
+    relatedProjects?: { title: string; url: string }[];
+    blogPosts?: { title: string; url: string }[];
+    idealFor?: string[];
+    pricingModel?: string;
+    commonMistakes?: string[];
+    performanceMetrics?: string[];
+    heroImageUrl?: string;
+    keywords?: string[];
+    meta?: {
+        title: string;
+        description: string;
+    };
 };
 
 export default function Services() {

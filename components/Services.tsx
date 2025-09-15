@@ -16,23 +16,7 @@ export default function Services() {
 
     const [parsedServices, setParsedServices] = useState<Service[]>([]);
 
-    const serviceIconMap: Record<string, ReactNode> = {
-        "2001": (
-            <Code className="h-8 w-8" />
-        ),
-        "2002": (
-            <ShoppingBag className="h-8 w-8" />
-        ),
-        "2003": (
-            <LayoutDashboard className="h-8 w-8" />
-        ),
-        "2004": (
-            <Search className="h-8 w-8" />
-        ),
-        "2005": (
-            <Settings className="h-8 w-8" />
-        )
-    };
+
 
 
 
@@ -42,6 +26,23 @@ export default function Services() {
     );
 
     useEffect(() => {
+        const serviceIconMap: Record<string, ReactNode> = {
+            "2001": (
+                <Code className="h-8 w-8" />
+            ),
+            "2002": (
+                <ShoppingBag className="h-8 w-8" />
+            ),
+            "2003": (
+                <LayoutDashboard className="h-8 w-8" />
+            ),
+            "2004": (
+                <Search className="h-8 w-8" />
+            ),
+            "2005": (
+                <Settings className="h-8 w-8" />
+            )
+        };
         const enrichedServices = currentProjects.map((service) => ({
             ...service,
             icon: serviceIconMap[service.id], // ID'ye göre icon eşle
