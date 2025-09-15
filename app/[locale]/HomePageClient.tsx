@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 
 const About = dynamic(() => import("@/components/About"), { ssr: false });
-const Services = dynamic(() => import("@/components/Services"), { ssr: false });
+const Services = dynamic(() => import("@/components/Services_"), { ssr: false });
 const Portfolio = dynamic(() => import("@/components/Portfolio"), { ssr: false });
 const ScrollToSection = dynamic(() => import("@/components/ScrollToSection"), { ssr: false });
 const Pricing = dynamic(() => import("@/components/Pricing"), { ssr: false });

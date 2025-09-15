@@ -63,8 +63,20 @@
     "maintenanceDesc": "Continuous website maintenance, performance monitoring, and proactive updates — so your site stays fast, secure, and up-to-date.",
     "learnMore": "Learn More",
     "closeModal": "Close",
-    "process": "Process",
-    "technologies": "Technologies"
+    "process": "Our Process",
+    "technologies": "Technologies",
+    "hero": "Our Services",
+    "benefits": "Benefits",
+    "useCases": "Use Cases",
+    "faq": "FAQ",
+    "relatedProjects": "Related Projects",
+    "blogPosts": "Blog Posts",
+    "step": "Step",
+    "idealFor": "Ideal For",
+    "noData": "No data available",
+    "pricingModel": "Pricing Model",
+    "commonMistakes": "Common Mistakes",
+    "performanceMetrics": "Performance Metrics"
   },
   "serviceDetails": {
     "webDev": {

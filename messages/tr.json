@@ -64,7 +64,19 @@
     "learnMore": "Daha Fazla Bilgi",
     "closeModal": "Kapat",
     "process": "Süreç",
-    "technologies": "Teknolojiler"
+    "technologies": "Teknolojiler",
+    "hero": "Hizmetlerimiz",
+    "benefits": "Faydalar",
+    "useCases": "Kullanım Alanları",
+    "faq": "Sık Sorulan Sorular",
+    "relatedProjects": "İlgili Projeler",
+    "blogPosts": "Blog Yazıları",
+    "step":"Adım",
+    "idealFor": "İdeal Olanlar",
+    "noData": "Veri mevcut değil",
+    "pricingModel": "Fiyatlandırma Modeli",
+    "commonMistakes": "Yaygın Hatalar",
+    "performanceMetrics": "Performans Ölçütleri"
   },
   "serviceDetails": {
     "webDev": {

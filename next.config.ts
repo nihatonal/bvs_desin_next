@@ -10,6 +10,7 @@ const bundleAnalyzer = withBundleAnalyzer({
 });
 
 const nextConfig: NextConfig = {
+  trailingSlash: true, // ← Bunu buraya ekle
   images: {
     domains: ["i.ibb.co"],
   },

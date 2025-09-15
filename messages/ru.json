@@ -64,7 +64,19 @@
     "learnMore": "Узнать больше",
     "closeModal": "Закрыть",
     "process": "Процесс",
-    "technologies": "Технологии"
+    "technologies": "Технологии",
+    "hero": "Наши услуги",
+    "benefits": "Преимущества",
+    "useCases": "Сценарии использования",
+    "faq": "Часто задаваемые вопросы",
+    "relatedProjects": "Связанные проекты",
+    "blogPosts": "Блог",
+    "step": "Шаг",
+    "idealFor": "Идеально для",
+    "noData": "Данные отсутствуют",
+    "pricingModel": "Модель ценообразования",
+    "commonMistakes": "Распространённые ошибки",
+    "performanceMetrics": "Показатели эффективности"
   },
   "serviceDetails": {
     "webDev": {
