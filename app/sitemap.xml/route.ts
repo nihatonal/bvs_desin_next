@@ -74,7 +74,7 @@ export async function GET() {
   // 3. Portfolio sayfaları
   for (const locale of locales) {
     for (const project of portfolioData[locale]) {
-      urls.push(`${baseUrl}/${locale}/portfolio/${project.slug}`);
+      urls.push(`${baseUrl}/${locale}/portfolio/${project.slug}/${project.id}`);
     }
   }
 
