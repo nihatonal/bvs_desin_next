@@ -27,7 +27,12 @@ const legalPaths: Record<
 };
 
 export async function GET() {
-  const urls: { loc: string; alternates?: Record<string, string> }[] = [];
+  const urls: {
+    loc: string;
+    lastmod?: string;
+    alternates?: Record<string, string>;
+  }[] = [];
+  const now = new Date().toISOString();
 
   // 1️⃣ Ana sayfalar
   locales.forEach((locale) => {
@@ -35,7 +40,7 @@ export async function GET() {
     const alternates: Record<string, string> = {};
     locales.forEach((lng) => (alternates[lng] = `${siteUrl}/${lng}/`));
     alternates["x-default"] = `${siteUrl}/en/`;
-    urls.push({ loc, alternates });
+    urls.push({ loc, lastmod: now, alternates });
   });
 
   // 2️⃣ Legal sayfalar
@@ -48,10 +53,8 @@ export async function GET() {
         const altPath = legalPaths[key as keyof typeof legalPaths][lng];
         alternates[lng] = `${siteUrl}/${lng}/${altPath}/`;
       });
-      alternates["x-default"] = `${siteUrl}/en/${
-        legalPaths[key as keyof typeof legalPaths]["en"]
-      }/`;
-      urls.push({ loc, alternates });
+      alternates["x-default"] = alternates["en"];
+      urls.push({ loc, lastmod: now, alternates });
     });
   });
 
@@ -71,7 +74,7 @@ export async function GET() {
           ] = `${siteUrl}/${lng}/project/${p.slug}/${project.id}/`;
       });
       alternates["x-default"] = alternates["en"];
-      urls.push({ loc, alternates });
+      urls.push({ loc, lastmod: now, alternates });
     });
   });
 
@@ -80,19 +83,19 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls
-  .map(({ loc, alternates }) => {
+  .map(({ loc, lastmod, alternates }) => {
     const alternateLinks = alternates
       ? Object.entries(alternates)
           .map(
             ([lng, href]) =>
-              `<xhtml:link rel="alternate" hreflang="${lng}" href="${href}" />`
+              `    <xhtml:link rel="alternate" hreflang="${lng}" href="${href}" />`
           )
-          .join("\n    ")
+          .join("\n")
       : "";
     return `<url>
   <loc>${loc}</loc>
-  ${alternateLinks}
-  <changefreq>monthly</changefreq>
+  ${lastmod ? `  <lastmod>${lastmod}</lastmod>` : ""}
+${alternateLinks ? alternateLinks + "\n" : ""}  <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>`;
   })
@@ -100,6 +103,9 @@ ${urls
 </urlset>`;
 
   return new NextResponse(sitemap, {
-    headers: { "Content-Type": "application/xml" },
+    headers: {
+      "Content-Type": "application/xml",
+      "Cache-Control": "no-cache, no-store, must-revalidate", // Her istekte güncel sitemap
+    },
   });
 }
