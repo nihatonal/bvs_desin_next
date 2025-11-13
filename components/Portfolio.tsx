@@ -98,7 +98,7 @@ export default function Portfolio() {
                         hidden: {},
                     }}
                 >
-                    {filteredProjects.map((project) => (
+                    {filteredProjects.slice().reverse().map((project) => (
                         <Card
                             key={project.id}
                             className="overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col"

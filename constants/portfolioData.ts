@@ -319,6 +319,65 @@ export const portfolioData: Record<string, Project[]> = {
         "react project",
       ],
     },
+    {
+      id: "1007",
+      slug: "ta-travel-web-site",
+      title: "TA-Travel Website",
+      liveUrl: "https://www.ta-travel.ru/",
+      description:
+        "A modern and multifunctional promotional website developed for TA-Travel. The site features destination highlights, contact forms, customer testimonials, minimal costs, and legal policies. Users can easily access information, subscribe to newsletters, and leave reviews. The admin panel allows content management, review approval, and Google Analytics tracking.",
+      client: "TA-Travel",
+      type: "web-application",
+      category: "Web Development + Admin Panel",
+      images: [
+        "/images/projects/ta-travel_home.webp",
+        "/images/projects/ta-travel_about.webp",
+        "/images/projects/ta-travel_destinations.webp",
+      ],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Firebase Hosting",
+        "i18next",
+        "Google Analytics",
+        "Email API",
+      ],
+      viewLiveSite: "Live Site",
+      challenge:
+        "Creating a fast, user-friendly, and visually appealing website for TA-Travel customers, while simplifying admin panel management of reviews, newsletters, and analytics.",
+      solution:
+        "Developed a modern and responsive web application using React and Tailwind CSS. The admin panel allows review moderation, newsletter management, and Google Analytics tracking. Only approved reviews are published, and new subscribers are notified immediately.",
+      results: [
+        "Visitors can easily explore destinations and leave reviews",
+        "Newsletter strengthens user and company engagement",
+        "Admin panel simplifies content and review management",
+        "Google Analytics integration allows performance and user behavior tracking",
+      ],
+      adminPanel: {
+        title: "Admin Panel",
+        content:
+          "The admin panel enables moderating user reviews, managing newsletter subscriptions, and viewing Google Analytics data. Admins decide which reviews are published and manage all processes efficiently.",
+      },
+      testimonial: {
+        content:
+          "Thanks to our new website, visitors can easily access content and services. Reviews and newsletter management are very simple via the admin panel.",
+        author: "TA-Travel Team",
+        company: "TA-Travel",
+      },
+      seoTitle: "TA-Travel Website | Modern Tourism Platform & Admin Panel",
+      seoDescription:
+        "A modern website developed for TA-Travel with destination highlights, customer reviews, newsletter functionality, and admin panel optimization.",
+      keywords: [
+        "tourism website",
+        "TA-Travel",
+        "react project",
+        "admin panel",
+        "newsletter",
+        "Google Analytics",
+      ],
+    },
   ],
   tr: [
     {
@@ -611,6 +670,65 @@ export const portfolioData: Record<string, Project[]> = {
         "react project",
       ],
     },
+    {
+      id: "1007",
+      slug: "ta-travel-web-sitesi",
+      title: "TA-Travel Web Sitesi",
+      liveUrl: "https://www.ta-travel.ru/",
+      description:
+        "TA-Travel için geliştirilen modern ve çok işlevli bir tanıtım web sitesi. Site, destinasyon tanıtımı, iletişim, müşteri yorumları, minimal maliyetler ve yasal politikalar gibi bölümler içeriyor. Kullanıcılar kolayca bilgiye ulaşabiliyor, newsletter aboneliği oluşturabiliyor ve yorum bırakabiliyor. Admin paneli sayesinde içerik yönetimi, yorum onayı ve Google Analytics takibi sağlanıyor.",
+      client: "TA-Travel",
+      type: "web-application",
+      category: "Web Geliştirme + Yönetim Paneli",
+      images: [
+        "/images/projects/ta-travel_home.webp",
+        "/images/projects/ta-travel_about.webp",
+        "/images/projects/ta-travel_destinations.webp",
+      ],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Firebase Hosting",
+        "i18next",
+        "Google Analytics",
+        "Email API",
+      ],
+      viewLiveSite: "Canlı Site",
+      challenge:
+        "TA-Travel müşterileri için hızlı, kullanıcı dostu ve görsel açıdan etkileyici bir site oluşturmak; aynı zamanda admin panelinden yorum, newsletter ve analiz takibini kolaylaştırmak.",
+      solution:
+        "React ve Tailwind CSS ile modern ve duyarlı bir web uygulaması geliştirdik. Admin paneli üzerinden kullanıcı yorumları değerlendiriliyor ve yayınlanacak olanlar seçiliyor. Newsletter sistemi ile yeni aboneler ve TA-Travel ekibi anlık bilgilendiriliyor. Google Analytics verileri panel üzerinden takip edilebiliyor.",
+      results: [
+        "Ziyaretçiler site üzerinden kolayca destinasyonları inceleyip yorum bırakabiliyor",
+        "Newsletter ile kullanıcı ve şirket etkileşimi güçlendi",
+        "Admin paneli ile içerik ve yorum yönetimi kolaylaştı",
+        "Google Analytics entegrasyonu sayesinde site performansı ve kullanıcı davranışı izlenebiliyor",
+      ],
+      adminPanel: {
+        title: "Yönetim Paneli",
+        content:
+          "Admin paneli, kullanıcı yorumlarını onaylama, newsletter abonelerini takip etme ve Google Analytics verilerini görüntüleme imkanı sağlar. Hangi yorumların yayınlanacağına admin karar verir ve panel tüm işlemleri kolaylaştırır.",
+      },
+      testimonial: {
+        content:
+          "Yeni web sitemiz sayesinde ziyaretçilerimiz içeriklere ve hizmetlerimize kolayca erişebiliyor. Yorumlar ve newsletter yönetimi admin paneli üzerinden çok rahat kontrol edilebiliyor.",
+        author: "TA-Travel Ekibi",
+        company: "TA-Travel",
+      },
+      seoTitle: "TA-Travel Web Sitesi | Modern Turizm ve Yönetim Paneli",
+      seoDescription:
+        "TA-Travel için geliştirilmiş modern web sitesi. Destinasyon tanıtımı, müşteri yorumları, newsletter ve admin paneli ile optimize edilmiş çözüm.",
+      keywords: [
+        "turizm web sitesi",
+        "TA-Travel",
+        "react proje",
+        "admin paneli",
+        "newsletter",
+        "Google Analytics",
+      ],
+    },
   ],
   ru: [
     {
@@ -899,6 +1017,66 @@ export const portfolioData: Record<string, Project[]> = {
         "онлайн-заказ",
         "панель ресторана",
         "react проект",
+      ],
+    },
+    {
+      id: "1007",
+      slug: "ta-travel-vebsayt",
+      title: "Веб-сайт TA-Travel",
+      liveUrl: "https://www.ta-travel.ru/",
+      description:
+        "Современный и многофункциональный промо-сайт, разработанный для TA-Travel. Сайт включает разделы с описанием направлений, контактные формы, отзывы клиентов, минимальные расходы и юридическую информацию. Пользователи могут легко получать информацию, подписываться на рассылку и оставлять отзывы. Админ-панель позволяет управлять контентом, утверждать отзывы и отслеживать данные Google Analytics.",
+      client: "TA-Travel",
+      type: "web-application",
+      category: "Веб-разработка + Админ-панель",
+      images: [
+        "/images/projects/ta-travel_home.webp",
+        "/images/projects/ta-travel_about.webp",
+        "/images/projects/ta-travel_destinations.webp",
+      ],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Firebase Hosting",
+        "i18next",
+        "Google Analytics",
+        "Email API",
+      ],
+      viewLiveSite: "Открыть сайт",
+      challenge:
+        "Создать быстрый, удобный и визуально привлекательный сайт для клиентов TA-Travel, при этом упростив управление отзывами, рассылкой и аналитикой через админ-панель.",
+      solution:
+        "Разработан современный и адаптивный веб-сайт с использованием React и Tailwind CSS. Админ-панель позволяет модерацию отзывов, управление подписками на рассылку и просмотр данных Google Analytics. Публикуются только одобренные отзывы, новые подписчики получают уведомления сразу.",
+      results: [
+        "Посетители могут легко изучать направления и оставлять отзывы",
+        "Рассылка укрепляет взаимодействие между пользователями и компанией",
+        "Админ-панель упрощает управление контентом и отзывами",
+        "Интеграция Google Analytics позволяет отслеживать производительность и поведение пользователей",
+      ],
+      adminPanel: {
+        title: "Админ-панель",
+        content:
+          "Админ-панель позволяет модерировать отзывы пользователей, управлять подписками на рассылку и просматривать данные Google Analytics. Администраторы решают, какие отзывы публиковать, и эффективно управляют всеми процессами.",
+      },
+      testimonial: {
+        content:
+          "Благодаря нашему новому сайту посетители легко получают доступ к контенту и услугам. Управление отзывами и рассылкой стало очень простым через админ-панель.",
+        author: "Команда TA-Travel",
+        company: "TA-Travel",
+      },
+      seoTitle:
+        "Веб-сайт TA-Travel | Современная туристическая платформа и админ-панель",
+      seoDescription:
+        "Современный веб-сайт для TA-Travel с описанием направлений, отзывами клиентов, функцией рассылки и оптимизированной админ-панелью.",
+      keywords: [
+        "туристический сайт",
+        "TA-Travel",
+        "проект на React",
+        "админ-панель",
+        "рассылка",
+        "Google Analytics",
       ],
     },
   ],
