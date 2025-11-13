@@ -23,6 +23,10 @@ const geistMono = localFont({
   display: "swap",
 });
 
+const siteUrl = "https://www.bravixcreative.com";
+const locales: Locale[] = ["tr", "en", "ru"];
+
+
 export default async function LocaleLayout({
   children,
   params,
@@ -39,16 +43,30 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale }); // ✅ düzeltildi
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <PlanProvider>
-        <ParallaxWrapper>
-          <div className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}>
-            <Header />
-            {children}
-            <Footer />
-          </div>
-        </ParallaxWrapper>
-      </PlanProvider>
-    </NextIntlClientProvider>
+    <html lang={locale}>
+      <head>
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteUrl}/${locale}/`} />
+
+        {/* Hreflang */}
+        {locales.map((lng) => (
+          <link key={lng} rel="alternate" hrefLang={lng} href={`${siteUrl}/${lng}/`} />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/`} />
+      </head>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <PlanProvider>
+            <ParallaxWrapper>
+              <div className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}>
+                <Header />
+                {children}
+                <Footer />
+              </div>
+            </ParallaxWrapper>
+          </PlanProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

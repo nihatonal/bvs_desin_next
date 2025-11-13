@@ -8,21 +8,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="tr">
+        <html >
             <head>
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <meta name="theme-color" content="#9F8CFD" />
                 <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-
-                {/* ✅ Canonical */}
-                <link rel="canonical" href="https://www.bravixcreative.com/tr/" />
-
-                {/* ✅ Hreflang Etiketleri */}
-                <link rel="alternate" hrefLang="tr" href="https://www.bravixcreative.com/tr/" />
-                <link rel="alternate" hrefLang="en" href="https://www.bravixcreative.com/en/" />
-                <link rel="alternate" hrefLang="ru" href="https://www.bravixcreative.com/ru/" />
-                <link rel="alternate" hrefLang="x-default" href="https://www.bravixcreative.com/" />
 
                 <Script
                     id="organization-schema"
