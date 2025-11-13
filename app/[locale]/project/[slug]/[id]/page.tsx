@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getProjectById, getAllProjects } from '@/lib/projectService';
 import ProjectDetailsWrapper from '@/components/ProjectDetailsWrapper';
+import Script from '@/node_modules/next/script';
 
 type Props = {
   params: Promise<{ locale: string; slug: string; id: string }>;
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProjectById(id, locale);
 
   if (!project) {
-    return { title: 'Project Not Found' };
+    return { title: "Project Not Found" };
   }
 
   const canonical = `${siteUrl}/${locale}/project/${project.slug}/${id}`;
@@ -35,34 +36,61 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       if (!proj) return null;
       return [lng, `${siteUrl}/${lng}/project/${proj.slug}/${id}`];
     })
-    .filter(Boolean) as [string, string][]; // TS: kesinlikle [string, string] olduğu garanti
+    .filter(Boolean) as [string, string][];
 
   const alternates = Object.fromEntries(alternatesEntries);
 
+  const ogImage = project.images?.[0]
+    ? `${siteUrl}${project.images[0]}`
+    : `${siteUrl}/default-og.jpg`;
+
   return {
-    title: `${project.title} | Bravix Creative`,
-    description: project.description,
+    // 🔹 Başlık ve açıklama: SEO öncelikli
+    title: project.seoTitle ?? `${project.title} | Bravix Creative`,
+    description: project.seoDescription ?? project.description,
+
+    // 🔹 Keywords (opsiyonel ama iyi olur)
+    keywords: project.keywords ?? [],
+
+    // 🔹 Alternatif diller & canonical
     alternates: {
       canonical,
       languages: {
         ...alternates,
-        'x-default': alternates['en'] ?? canonical, // EN yoksa canonical kullan
+        "x-default": alternates["en"] ?? canonical,
       },
     },
+
+    // 🔹 Open Graph (Facebook, LinkedIn vs.)
     openGraph: {
-      title: project.title,
-      description: project.description,
+      title: project.seoTitle ?? `${project.title} | Bravix Creative`,
+      description: project.seoDescription ?? project.description,
       url: canonical,
-      type: 'website',
-      images: project.images.map((img) => ({
-        url: `${siteUrl}${img}`,
-        width: 1200,
-        height: 630,
-        alt: project.title,
-      })),
+      siteName: "Bravix Creative",
+      type: "article",
+      locale,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+
+    // 🔹 Twitter kartları
+    twitter: {
+      card: "summary_large_image",
+      title: project.seoTitle ?? `${project.title} | Bravix Creative`,
+      description: project.seoDescription ?? project.description,
+      images: [ogImage],
+      creator: "@bravixcreative",
     },
   };
 }
+
+
 
 
 
@@ -73,8 +101,33 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) {
     return notFound();
   }
+  const canonical = `https://www.bravixcreative.com/${locale}/project/${project.slug}/${id}`;
+  return (
+    <>
+      <ProjectDetailsWrapper project={project} />
 
-  return <ProjectDetailsWrapper project={project} />;
+      <Script
+        id={`schema-${project.id}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            name: project.title,
+            description: project.description,
+            url: canonical,
+            image: project.images.map((img) => `https://www.bravixcreative.com${img}`),
+            creator: {
+              "@type": "Organization",
+              name: "Bravix Creative",
+              url: "https://www.bravixcreative.com",
+            },
+            inLanguage: locale,
+          }),
+        }}
+      />
+    </>
+  );
 }
 
 export async function generateStaticParams(): Promise<Array<{ locale: string; slug: string; id: string }>> {

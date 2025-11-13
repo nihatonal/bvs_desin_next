@@ -25,25 +25,28 @@ export type Project = {
   results?: string[];
   adminPanel?: AdminPanel;
   testimonial?: Testimonial;
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
 };
 
 export const portfolioData: Record<string, Project[]> = {
   en: [
     {
       id: "1001",
-      slug: "apart-hotel-website-and-admin-panel",
-      viewLiveSite: "Live Site",
+      slug: "apartment-hotel-website-and-admin-panel",
+      viewLiveSite: "View Site",
       liveUrl: "https://www.monihomes.com.tr",
-      title: "Apart Hotel Website & Admin Panel",
+      title: "Apartment Hotel Website & Admin Panel",
       client: "Monihomes",
       type: "web-design",
       category: "Web Design + Admin Panel",
       description:
-        "A modern one-page promotional website and a custom admin panel developed for the hotel owner. The project provides a user-friendly interface for guests while allowing the hotel owner to manage prices and occupancy easily.",
+        "Modern single-page promotional website and custom admin panel for a hotel owner. The project provides a user-friendly interface for guests and allows the owner to manage room rates and availability easily.",
       challenge:
-        "The client needed a professional yet simple page to promote their hotel. They also wanted a backend system to track the occupancy of each room using Google Calendar and collect reservation requests efficiently.",
+        "The client wanted a professional but simple site to promote their hotel. Additionally, a backend system was needed to track room availability via Google Calendar and collect reservation requests efficiently.",
       solution:
-        "I designed a fast and elegant landing page using React. The admin panel was built with Node.js/Express, MongoDB, and JWT. Room availability is automatically synced from Google Calendar. Instead of booking directly, guests submit their info via a form, which is sent to the owner through email and WhatsApp. The admin panel also displays Google Analytics data in daily, weekly, and yearly graphs.",
+        "Designed a fast and stylish landing page with React. The admin panel was built with Node.js/Express, MongoDB, and JWT. Room availability is synchronized automatically with Google Calendar. Guests submit their information via a form, which is sent to the owner via email and WhatsApp. Google Analytics data is displayed in daily, weekly, and yearly charts.",
       technologies: [
         "React",
         "Node",
@@ -53,12 +56,12 @@ export const portfolioData: Record<string, Project[]> = {
       ],
       results: [
         "60% reduction in management time",
-        "100% of requests are captured via email and WhatsApp",
+        "All requests captured 100% via email and WhatsApp",
         "Mobile-friendly design significantly improved user experience",
       ],
       testimonial: {
         content:
-          "Managing the hotel became much easier with our new website and panel. I can control all the information from one place, and guest requests reach me instantly.",
+          "Our new website and admin panel made hotel management much easier. I can control all information in one place and guest requests reach me instantly.",
         author: "U. Dinc, Owner",
         company: "Monihomes",
       },
@@ -67,31 +70,40 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/moniomes-2_iphones.webp",
         "/images/projects/monihomes_post.webp",
       ],
+      seoTitle: "Apartment Hotel Website & Admin Panel | Bravix Creative",
+      seoDescription:
+        "Modern hotel website and admin panel developed for Monihomes. Professional solution with React, Node.js, and Google Calendar integration.",
+      keywords: [
+        "hotel website",
+        "admin panel",
+        "react node project",
+        "bravix creative",
+      ],
     },
     {
       id: "1002",
-      slug: "vineyard-investment-website",
-      title: "Vineyard Investment Website",
-      viewLiveSite: "Live Site",
+      slug: "bag-investment-website",
+      viewLiveSite: "View Site",
       liveUrl: "https://konyalimemlak.web.app/",
+      title: "Vineyard Investment Website",
       client: "Bag Bahçe Yatırım",
       type: "web-design",
       category: "Multilingual Web Design",
       description:
-        "A bilingual promotional website created for a vineyard investment company operating in the Konya region. The site presents the company’s services, investment guides, and blog content while reflecting a natural and trustworthy brand image.",
+        "Modern, fast, bilingual promotional website for a vineyard investment company in the Konya region. Presents services, investment guides, and blog content while reflecting a reliable and natural brand image.",
       challenge:
-        "The client needed a modern and fast-loading website to attract investors interested in vineyard ownership. It had to support both Turkish and English, and offer a nature-inspired design aligned with the concept of sustainable land investment.",
+        "A fast, aesthetic, and multilingual website was needed to attract investors. The design aimed to match a natural and sustainable investment theme.",
       solution:
-        "I developed a responsive and aesthetically appealing landing page using React. The design incorporates earth tones, parallax effects, and a clean layout. The site supports multilingual content (i18n) and features sections such as About, Investment Process, Blog, and Contact. A blog system is planned to share investment tips and vineyard ownership insights.",
+        "Designed a responsive and visually appealing landing page with React. Used a simple layout and natural tones. Multilingual content support (i18n) included. Sections: About, Investment Process, Blog, Contact.",
       technologies: ["React", "Node", "CSS3", "i18next", "Framer Motion"],
       results: [
-        "Improved brand trust with a professional design",
-        "Bilingual interface increased accessibility for foreign investors",
-        "Optimized performance for mobile and desktop users",
+        "Professional design increased brand trust",
+        "Bilingual interface improved accessibility for foreign investors",
+        "Optimized performance for both mobile and desktop users",
       ],
       testimonial: {
         content:
-          "Our website is highly satisfying both visually and in terms of user experience. Reaching out to investors is now much easier.",
+          "Our website is visually appealing and offers a satisfying user experience. Communicating with investors has become much easier.",
         author: "V. Karakuş",
         company: "Bag Bahçe Yatırım",
       },
@@ -100,38 +112,47 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/bby-phone.webp",
         "/images/projects/bby-2-pages.webp",
       ],
+      seoTitle: "Vineyard Investment Website | Bravix Creative",
+      seoDescription:
+        "Modern, fast, bilingual website for a vineyard investment company in Konya. Optimized solution with React and i18next.",
+      keywords: [
+        "vineyard investment website",
+        "multilingual site",
+        "react project",
+        "bravix creative",
+      ],
     },
     {
       id: "1003",
       slug: "the-glass-hut-cabin-website",
-      title: "The Glass Hut – Cabin Website",
       viewLiveSite: "Demo",
       liveUrl: "https://theglasshut.web.app/",
-      client: "Demo Project",
+      title: "The Glass Hut – Cabin Promotional Website",
+      client: "Personal Project",
       type: "web-development",
       category: "Web Development",
       description:
-        "A modern, visually immersive promotional website designed for a nature-focused glamping cabin. The site presents detailed information about the cabin, its surroundings, booking options, and frequently asked questions in a clean single-page architecture.",
+        "Modern and visually appealing promotional website for a glass cabin offering a nature-immersive glamping experience. Single-page design includes cabin details, surrounding area info, booking form, and FAQ.",
       challenge:
-        "The client wanted a visually appealing and minimalist website that reflects the peaceful, nature-connected experience offered by their glass cabin. It needed to showcase the space effectively while keeping navigation simple and mobile-friendly.",
+        "The client wanted a nature-friendly, simple, yet visually rich website to promote the cabin and provide easy access to information.",
       solution:
-        "I built a smooth, single-page web application using React and deployed it via Firebase Hosting. The content was divided into sections such as The Hut, The Area, Booking, About Us, and FAQ, allowing users to explore everything seamlessly. Animations and full-screen visuals help convey the serenity and charm of the experience.",
+        "Built a single-page app with React and deployed via Firebase Hosting. Sections include The Hut, The Area, Booking, About Us, and FAQ. Animations and full-screen images create a calm and serene atmosphere.",
       technologies: [
         "React",
         "React Router",
-        "CSS3",
+        "Tailwind CSS",
         "Framer Motion",
         "Firebase Hosting",
       ],
       results: [
-        "Elegant, immersive web presence that matches the natural brand",
-        "Clear navigation and mobile optimization improved user flow",
-        "Custom content structure helped increase time spent on site",
+        "Created a clean and appealing online presence reflecting the brand",
+        "Mobile-friendly design and clear navigation improved UX",
+        "Increased visitor time on site",
       ],
       testimonial: {
         content:
-          "Our website turned out just as we imagined – simple, elegant, and in harmony with nature. Our guests can now access information easily, and the reservation process is much clearer.",
-        author: "Concept Feedback",
+          "Our site is exactly as we imagined: clean, stylish, and nature-friendly. Guests can now access information easily and the booking process is clearer.",
+        author: "Conceptual Feedback",
         company: "Internal Review",
       },
       images: [
@@ -139,24 +160,32 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/glasshut_screens__.webp",
         "/images/projects/glasshutscreens_.webp",
       ],
+      seoTitle: "The Glass Hut – Glamping Cabin Website | Bravix Creative",
+      seoDescription:
+        "Single-page promotional website for a glass cabin with nature-immersive glamping experience. Easy booking and information access.",
+      keywords: [
+        "glamping site",
+        "cabin promotional site",
+        "single-page website",
+        "react project",
+      ],
     },
     {
       id: "1004",
       slug: "mindfulness-app-landing-page",
-      title: "Mindfulness App Landing Page",
       viewLiveSite: "Demo",
-      liveUrl: "https://zenmind-breathe.netlify.app/",
-      client: "Demo Project",
+      liveUrl: "https://theglasshut.web.app/",
+      title: "Mindfulness App Landing Page",
+      client: "Personal Project",
       type: "web-design",
       category: "Landing Page Design",
       description:
-        "A responsive, elegant and calming one-page landing website created to promote the ZenMind mobile app. Designed to reflect the essence of mindfulness and breathing techniques while ensuring clarity and ease of use across all devices.",
+        "Single-page, serene, responsive website to promote the ZenMind mobile app. Uses calming colors, typography, and interactions aligned with mindfulness theme for a user-friendly experience.",
       challenge:
-        "The client needed a visually soothing, fast-loading and mobile-optimized website to reflect the calming nature of the ZenMind app and convert visitors into app users. The main challenge was to convey mindfulness interactively, especially through a breathing animation.",
+        "Client requested a fast-loading, mobile-friendly website reflecting the app’s calming nature. Main challenge: digitally convey mindfulness via interactive animations like breathing.",
       solution:
-        "I created a modern, responsive landing page using React and Tailwind CSS. The 'Breathe In / Breathe Out' animation was built using custom motion components to simulate mindful breathing. The design included a clear app showcase, user testimonials, pricing section, and mobile-optimized layout. All content is displayed with soft transitions and attention to whitespace, enhancing the user’s feeling of calm.",
+        "Built a responsive landing page with React and Tailwind CSS. 'Breathe In / Out' animation created using custom motion components. Design includes app promo, user reviews, pricing, and CTA buttons. White space and smooth transitions provide a calm UX.",
       technologies: [
-        "Figma",
         "React",
         "Tailwind CSS",
         "Framer Motion",
@@ -164,14 +193,14 @@ export const portfolioData: Record<string, Project[]> = {
         "Lottie Animation",
       ],
       results: [
-        "Improved mobile conversion by 45%",
-        "Highly praised UI/UX by early users",
-        "Increased app downloads through clear CTA placement",
+        "Mobile conversion increased by 45%",
+        "UI/UX design highly appreciated by early users",
+        "Clear CTA improved app downloads",
       ],
       testimonial: {
         content:
-          "The new landing page feels exactly like our app: calm, minimal, and inspiring. It truly speaks our brand’s voice and encourages users to take a deep breath and explore ZenMind.",
-        author: "Concept Feedback",
+          "The landing page feels exactly like our app: calm, simple, and inspiring. Matches our brand voice perfectly.",
+        author: "Conceptual Feedback",
         company: "Internal Review",
       },
       images: [
@@ -179,22 +208,31 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/zenmind_instagram.webp",
         "/images/projects/zenmind_laptop.png",
       ],
+      seoTitle: "Mindfulness App Landing Page | Bravix Creative",
+      seoDescription:
+        "Single-page ZenMind landing page with calming design, interactive breathing animation, and mobile-friendly experience.",
+      keywords: [
+        "mindfulness site",
+        "ZenMind landing",
+        "landing page",
+        "react project",
+      ],
     },
     {
       id: "1005",
-      slug: "creator-flow-dashboard-ui",
-      title: "Creator Flow Dashboard UI",
+      slug: "creative-flow-dashboard",
+      title: "Creative Flow Dashboard UI",
       viewLiveSite: "Demo",
       liveUrl: "https://creator-flow-dashboard.netlify.app/",
-      client: "Demo Project",
+      client: "Personal Project",
       type: "ui-ux",
-      category: "Dashboard UI/UX ",
+      category: "Dashboard UI/UX",
       description:
-        "A modern, responsive dashboard UI designed to streamline the creative workflow for content creators. The interface focuses on usability, clarity, and aesthetic balance, offering an efficient space to manage tasks, earnings, content, and insights.",
+        "Modern, responsive dashboard interface designed to streamline creators’ workflows. Focused on usability, clarity, and aesthetic balance for task, earnings, content, and analytics management.",
       challenge:
-        "The goal was to create a visually appealing and functional interface that content creators can use daily to manage their creative flow. The main challenge was balancing data density with a clean and engaging visual design, especially across mobile and desktop.",
+        "The goal was to build a visually appealing and functional dashboard for daily use. Main challenge: balance visual clarity and data density across mobile and desktop.",
       solution:
-        "Using Figma for wireframing and high-fidelity prototyping, I designed a flexible dashboard with modular components. Key elements like revenue charts, recent activity, quick actions, and navigation were structured with intuitive UX in mind. Color themes and spacing were carefully applied to ensure both focus and calmness during prolonged use.",
+        "Used Figma for wireframes and high-fidelity prototypes. Designed intuitive user experience with income charts, recent activities, quick actions, and navigation. Color themes and spacing optimized focus and calmness for long-term use.",
       technologies: [
         "Figma",
         "React",
@@ -203,14 +241,14 @@ export const portfolioData: Record<string, Project[]> = {
         "Data Visualization",
       ],
       results: [
-        "Efficient user flow with minimal cognitive load",
+        "Efficient workflow with minimal cognitive load",
         "Highly adaptable component system for expansion",
-        "Positive feedback on aesthetics and usability from creative professionals",
+        "Positive feedback from creative professionals on aesthetics and usability",
       ],
       testimonial: {
         content:
-          "This dashboard design strikes the perfect balance between functionality and aesthetic clarity. It’s exactly the kind of tool I’d want to use every day as a creator.",
-        author: "Concept Feedback",
+          "This dashboard strikes a perfect balance between functionality and visual clarity. As a content creator, I would want to use it daily.",
+        author: "Conceptual Feedback",
         company: "Internal Review",
       },
       images: [
@@ -218,26 +256,35 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/dashboard_2.webp",
         "/images/projects/dashboard_1.webp",
       ],
+      seoTitle: "Creative Flow Dashboard UI | Bravix Creative",
+      seoDescription:
+        "Modern, responsive, aesthetic UI/UX dashboard for creators. Optimized for task, earnings, content, and analytics management.",
+      keywords: [
+        "ui/ux dashboard",
+        "creative flow",
+        "dashboard interface",
+        "react project",
+      ],
     },
     {
       id: "1006",
-      slug: "fast-food-restaurant",
+      slug: "fast-food-restaurant-website",
       viewLiveSite: "Live Site",
       liveUrl: "https://quick-bite-fastfood.netlify.app/",
-      title: "Fast Food Restaurant",
-      client: "Demo Project",
+      title: "Fast Food Restaurant Website",
+      client: "Personal Project",
       type: "web-application",
-      category: "Web Application + E-commerce",
+      category: "Web Design + E-commerce",
       description:
-        "Quick Bite is a fast food restaurant website designed to deliver a complete online ordering experience. Visitors can browse a modern, responsive menu, add items to their cart, make secure payments, and track their orders in real time — all from one seamless interface.",
+        "Quick Bite offers a complete online ordering experience for a fast food restaurant. Visitors can browse a modern responsive menu, add items to cart, make secure payments, and track orders in real-time.",
       challenge:
-        "The goal was to build a visually appealing and user-friendly digital platform that replaced traditional ordering methods with a fully integrated system for online ordering, payments, and delivery tracking — improving both customer experience and internal efficiency.",
+        "The goal was to replace traditional ordering with fully integrated online ordering, payment, and delivery tracking system to improve customer experience and internal efficiency.",
       solution:
-        "Using React and modern web development practices, I crafted a responsive and interactive food ordering platform. Key features include a dynamic cart system, payment integration, and a real-time order tracking dashboard.",
+        "Built an interactive food ordering platform with React. Key features include dynamic cart system, payment integration, and real-time order tracking dashboard.",
       adminPanel: {
         title: "Admin Panel",
         content:
-          "To streamline operations on the restaurant's side, I built a lightweight admin panel. The panel enables staff to monitor and manage incoming orders, update order statuses (e.g., 'Preparing', 'Out for Delivery', 'Delivered'), and view customer and payment information securely. It simplifies workflow by giving the restaurant real-time insight into the order pipeline, reducing manual coordination and increasing efficiency.",
+          "Lightweight admin panel enables staff to track incoming orders, update order status ('Preparing', 'On the Way', 'Delivered'), and securely access customer/payment info. Provides instant visibility into the order process and improves efficiency.",
       },
       technologies: [
         "React",
@@ -247,13 +294,13 @@ export const portfolioData: Record<string, Project[]> = {
         "Local Storage",
       ],
       results: [
-        "Enabled secure online payments and real-time delivery tracking",
-        "Improved order management efficiency with an admin dashboard",
-        "Enhanced customer satisfaction through a smooth, mobile-first experience",
+        "Secure online payment and real-time delivery tracking",
+        "Improved order management efficiency via admin panel",
+        "Mobile-first design enhanced customer satisfaction",
       ],
       testimonial: {
         content:
-          "Our customers love the convenience of ordering and paying online. The order tracking feature has also reduced phone inquiries and improved our workflow.",
+          "Our customers love the ease of online ordering and payment. The order tracking feature reduced phone inquiries and improved workflow.",
         author: "Restaurant Manager",
         company: "Quick Bite",
       },
@@ -262,9 +309,17 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/QB_menu.webp",
         "/images/projects/menu-page.webp",
       ],
+      seoTitle: "Fast Food Restaurant Website | Bravix Creative",
+      seoDescription:
+        "Modern and interactive fast food website for Quick Bite. Optimized online ordering, payment, and real-time tracking.",
+      keywords: [
+        "fast food website",
+        "online ordering",
+        "restaurant panel",
+        "react project",
+      ],
     },
   ],
-
   tr: [
     {
       id: "1001",
@@ -304,6 +359,17 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/moniomes-2_iphones.webp",
         "/images/projects/monihomes_post.webp",
       ],
+
+      // 🔹 Yeni SEO alanları
+      seoTitle: "Apart Otel Web Sitesi ve Yönetim Paneli | Bravix Creative",
+      seoDescription:
+        "Monihomes için geliştirilen modern otel web sitesi ve yönetici paneli. React, Node.js ve Google Takvimi entegrasyonu ile profesyonel çözüm.",
+      keywords: [
+        "otel web sitesi",
+        "yönetim paneli",
+        "react node proje",
+        "bravix creative",
+      ],
     },
     {
       id: "1002",
@@ -315,20 +381,20 @@ export const portfolioData: Record<string, Project[]> = {
       type: "web-design",
       category: "Çok Dilli Web Tasarımı",
       description:
-        "Konya bölgesinde faaliyet gösteren bir bağ yatırımı şirketi için oluşturulmuş iki dilli tanıtım web sitesi. Site, şirketin hizmetlerini, yatırım kılavuzlarını ve blog içeriklerini sunarken, doğal ve güvenilir bir marka imajı yansıtmaktadır.",
+        "Konya bölgesinde faaliyet gösteren bir bağ yatırımı şirketi için modern, hızlı ve iki dilli tanıtım sitesi. Şirketin hizmetlerini, yatırım kılavuzlarını ve blog içeriklerini sunarken güvenilir ve doğal bir marka imajı sunar.",
       challenge:
-        "Müşteri, bağ sahipliğiyle ilgilenen yatırımcıları çekmek için modern ve hızlı yüklenen bir web sitesi istiyordu. Hem Türkçe hem de İngilizce desteklemesi ve sürdürülebilir arazi yatırımı konseptiyle uyumlu doğal bir tasarım sunması gerekiyordu.",
+        "Yatırımcıları çekmek için hızlı, estetik ve çok dilli bir web sitesi gerekiyordu. Doğal ve sürdürülebilir yatırım temasına uygun bir tasarım hedeflendi.",
       solution:
-        "React kullanarak duyarlı ve estetik açıdan çekici bir açılış sayfası geliştirdim. Tasarım, doğal tonlar, paralaks efektler ve sade bir düzen içeriyor. Site, çok dilli içerik (i18n) desteği sunuyor ve Hakkında, Yatırım Süreci, Blog ve İletişim gibi bölümleri içeriyor. Yatırım ipuçları ve bağ sahipliği bilgilerini paylaşmak için bir blog sistemi planlanmıştır.",
+        "React kullanarak duyarlı ve görsel açıdan çekici bir açılış sayfası tasarlandı. Sade bir düzen ve doğal tonlar kullanıldı. Çok dilli içerik (i18n) desteği sunuldu. Hakkında, Yatırım Süreci, Blog ve İletişim bölümleri oluşturuldu.",
       technologies: ["React", "Node", "CSS3", "i18next", "Framer Motion"],
       results: [
         "Profesyonel tasarım ile marka güveni arttı",
-        "İki dilli arayüz, yabancı yatırımcılar için erişilebilirliği artırdı",
+        "İki dilli arayüz ile yabancı yatırımcılar için erişilebilirlik sağlandı",
         "Mobil ve masaüstü kullanıcıları için optimize edilmiş performans",
       ],
       testimonial: {
         content:
-          "Web sitemiz hem görsel olarak hem de kullanıcı deneyimi açısından çok tatmin edici oldu. Yatırımcılarla iletişime geçmek artık çok daha kolay.",
+          "Web sitemiz hem görsel olarak hem de kullanıcı deneyimi açısından çok tatmin edici oldu. Yatırımcılarla iletişim artık çok daha kolay.",
         author: "V. Karakuş",
         company: "Bag Bahçe Yatırım",
       },
@@ -336,6 +402,15 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/bagbahce_multi.webp",
         "/images/projects/bby-phone.webp",
         "/images/projects/bby-2-pages.webp",
+      ],
+      seoTitle: "Bağ Yatırım Web Sitesi | Bravix Creative",
+      seoDescription:
+        "Konya bölgesinde faaliyet gösteren bağ yatırımı şirketi için modern, hızlı ve çok dilli web sitesi. React ve i18next ile optimize edilmiş çözüm.",
+      keywords: [
+        "bağ yatırımı web sitesi",
+        "çok dilli site",
+        "react proje",
+        "bravix creative",
       ],
     },
     {
@@ -376,6 +451,16 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/glasshut_screens__.webp",
         "/images/projects/glasshutscreens_.webp",
       ],
+      seoTitle:
+        "The Glass Hut – Glamping Kabin Tanıtım Sitesi | Bravix Creative",
+      seoDescription:
+        "Doğayla iç içe glamping deneyimi sunan cam kabin için modern ve etkileyici tek sayfalık tanıtım sitesi. Rezervasyon ve bilgi erişimi kolay.",
+      keywords: [
+        "glamping sitesi",
+        "cabin tanıtım sitesi",
+        "tek sayfa web sitesi",
+        "react project",
+      ],
     },
     {
       id: "1004",
@@ -415,6 +500,15 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/zenmind_instagram.webp",
         "/images/projects/zenmind_laptop.png",
       ],
+      seoTitle: "Mindfulness Uygulama Tanıtım Sitesi | Bravix Creative",
+      seoDescription:
+        "ZenMind mobil uygulaması için oluşturulmuş tek sayfalık landing page. Huzurlu tasarım, interaktif nefes animasyonu ve mobil uyumlu deneyim.",
+      keywords: [
+        "mindfulness sitesi",
+        "ZenMind tanıtım",
+        "landing page",
+        "react project",
+      ],
     },
     {
       id: "1005",
@@ -453,6 +547,15 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/dasboard_destkop.webp",
         "/images/projects/dashboard_2.webp",
         "/images/projects/dashboard_1.webp",
+      ],
+      seoTitle: "Yaratıcı Akış Paneli Arayüzü | Bravix Creative",
+      seoDescription:
+        "İçerik üreticileri için modern, duyarlı ve estetik bir UI/UX panel arayüzü. Görev, gelir ve analiz yönetimi için optimize edildi.",
+      keywords: [
+        "ui/ux panel",
+        "yaratıcı akış",
+        "dashboard arayüzü",
+        "react project",
       ],
     },
     {
@@ -498,39 +601,48 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/QB_menu.webp",
         "/images/projects/menu-page.webp",
       ],
+      seoTitle: "Fast Food Restoran Web Sitesi | Bravix Creative",
+      seoDescription:
+        "Quick Bite için modern ve etkileşimli fast food web sitesi. Online sipariş, ödeme ve gerçek zamanlı sipariş takibi ile optimize edildi.",
+      keywords: [
+        "fast food web sitesi",
+        "online sipariş",
+        "restoran paneli",
+        "react project",
+      ],
     },
   ],
   ru: [
     {
       id: "1001",
-      slug: "veb-sayt-apart-otelya-i-administrativnaya-panel",
-      viewLiveSite: "Сайт проекта",
+      slug: "apart-otel-veb-sayt-i-panel-administratora",
+      viewLiveSite: "Посмотреть сайт",
       liveUrl: "https://www.monihomes.com.tr",
-      title: "Веб-сайт апарт-отеля и административная панель",
+      title: "Апарт-отель Веб-сайт & Панель администратора",
       client: "Monihomes",
       type: "web-design",
       category: "Веб-дизайн + Панель администратора",
       description:
-        "Современный одностраничный промо-сайт и индивидуальная административная панель, разработанные для владельца отеля. Проект предоставляет удобный интерфейс для гостей и позволяет владельцу отеля легко управлять ценами и занятостью.",
+        "Современный одностраничный промо-сайт и индивидуальная панель администратора для владельца отеля. Проект обеспечивает удобный интерфейс для гостей и позволяет владельцу легко управлять ценами и доступностью номеров.",
       challenge:
-        "Клиенту нужно было создать профессиональную, но простую страницу для продвижения своего отеля. Также требовалась бэкэнд-система для отслеживания занятости каждой комнаты через Google Календарь и эффективного сбора запросов на бронирование.",
+        "Клиент хотел профессиональный, но простой сайт для продвижения отеля. Также требовалась бэкэнд-система для отслеживания занятости номеров через Google Календарь и эффективного сбора заявок на бронирование.",
       solution:
-        "Я разработал быстрый и элегантный лендинг с использованием React. Административная панель была построена с использованием Node.js/Express, MongoDB и JWT. Занятость комнат автоматически синхронизируется с Google Календарем. Вместо прямого бронирования гости отправляют свои данные через форму, и эта информация отправляется владельцу через электронную почту и WhatsApp. Административная панель также отображает данные Google Analytics в виде графиков за день, неделю и год.",
+        "Разработан быстрый и стильный лендинг с использованием React. Панель администратора построена с Node.js/Express, MongoDB и JWT. Доступность номеров синхронизируется автоматически с Google Календарем. Гости отправляют информацию через форму, которая поступает владельцу по электронной почте и WhatsApp. Данные Google Analytics отображаются в виде графиков за день, неделю и год.",
       technologies: [
         "React",
         "Node",
         "MongoDB",
         "Tailwind CSS",
-        "Google Календарь API",
+        "Google Calendar API",
       ],
       results: [
-        "Снижение времени управления на 60%",
-        "100% запросов зафиксированы через электронную почту и WhatsApp",
-        "Мобильный дизайн значительно улучшил пользовательский опыт",
+        "Сокращение времени управления на 60%",
+        "Все заявки 100% получены через email и WhatsApp",
+        "Мобильная версия значительно улучшила UX",
       ],
       testimonial: {
         content:
-          "Управление отелем стало гораздо проще с новым сайтом и панелью. Я могу контролировать всю информацию в одном месте, а запросы от гостей поступают ко мне мгновенно.",
+          "Наш новый сайт и панель сделали управление отелем намного проще. Я могу контролировать всю информацию в одном месте, а заявки гостей приходят мгновенно.",
         author: "U. Dinc, Владелец",
         company: "Monihomes",
       },
@@ -539,31 +651,41 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/moniomes-2_iphones.webp",
         "/images/projects/monihomes_post.webp",
       ],
+      seoTitle:
+        "Апарт-отель Веб-сайт и Панель администратора | Bravix Creative",
+      seoDescription:
+        "Современный веб-сайт и панель администратора для Monihomes. Профессиональное решение с React, Node.js и интеграцией Google Календаря.",
+      keywords: [
+        "веб-сайт отеля",
+        "панель администратора",
+        "react node проект",
+        "bravix creative",
+      ],
     },
     {
       id: "1002",
-      slug: "veb-sayt-investiciy-v-vinodelni",
-      viewLiveSite: "Сайт проекта",
+      slug: "bag-investitsionnyy-veb-sayt",
+      viewLiveSite: "Посмотреть сайт",
       liveUrl: "https://konyalimemlak.web.app/",
-      title: "Веб-сайт инвестиций в винодельни",
+      title: "Веб-сайт Bag Investment",
       client: "Bag Bahçe Yatırım",
       type: "web-design",
       category: "Многоязычный веб-дизайн",
       description:
-        "Двухъязычный промо-сайт, созданный для компании по инвестициям в винодельни, работающей в регионе Конья. Сайт представляет услуги компании, инвестиционные гиды и блог-контент, отражая естественный и надежный имидж бренда.",
+        "Современный, быстрый, двуязычный промо-сайт для инвестиционной компании по виноградникам в регионе Конья. Представляет услуги, инвестиционные руководства и блоговый контент, отражая надежный и естественный имидж бренда.",
       challenge:
-        "Клиенту нужно было создать современный и быстро загружающийся сайт, чтобы привлечь инвесторов, интересующихся владением винодельней. Сайт должен был поддерживать как турецкий, так и английский языки, и предлагать дизайн, вдохновленный природой, в соответствии с концепцией устойчивых земельных инвестиций.",
+        "Нужен был быстрый, эстетичный и многоязычный сайт для привлечения инвесторов. Дизайн должен был соответствовать естественной и устойчивой инвестиционной теме.",
       solution:
-        "Я разработал адаптивную и эстетически привлекательную главную страницу с использованием React. Дизайн включает естественные оттенки, параллакс-эффекты и чистую структуру. Сайт поддерживает многоязычный контент (i18n) и включает разделы, такие как О нас, Процесс инвестиций, Блог и Контакты. Планируется система блога для обмена инвестиционными советами и инсайтами по владению винодельнями.",
+        "Разработан адаптивный и визуально привлекательный лендинг с React. Использованы простая структура и естественные оттенки. Поддержка многоязычного контента (i18n). Разделы: О компании, Процесс инвестирования, Блог, Контакты.",
       technologies: ["React", "Node", "CSS3", "i18next", "Framer Motion"],
       results: [
-        "Увеличение доверия к бренду с помощью профессионального дизайна",
-        "Двуязычный интерфейс повысил доступность для иностранных инвесторов",
-        "Оптимизированная производительность для мобильных и десктопных пользователей",
+        "Профессиональный дизайн повысил доверие к бренду",
+        "Двуязычный интерфейс улучшил доступность для иностранных инвесторов",
+        "Оптимизированная производительность для мобильных и настольных пользователей",
       ],
       testimonial: {
         content:
-          "Наш веб-сайт оказался очень удовлетворительным как с визуальной, так и с пользовательской точки зрения. Связь с инвесторами теперь намного проще.",
+          "Наш сайт визуально привлекательный и удобный для пользователей. Связь с инвесторами стала намного проще.",
         author: "V. Karakuş",
         company: "Bag Bahçe Yatırım",
       },
@@ -572,22 +694,31 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/bby-phone.webp",
         "/images/projects/bby-2-pages.webp",
       ],
+      seoTitle: "Веб-сайт Bag Investment | Bravix Creative",
+      seoDescription:
+        "Современный, быстрый, двуязычный сайт инвестиционной компании в регионе Конья. Оптимизированное решение с React и i18next.",
+      keywords: [
+        "инвестиции виноградник сайт",
+        "многоязычный сайт",
+        "react проект",
+        "bravix creative",
+      ],
     },
     {
       id: "1003",
-      slug: "the-glass-hut-sayt-dlya-steklyannogo-domika",
-      viewLiveSite: "Демо",
+      slug: "the-glass-hut-kabiny-veb-sayt",
+      viewLiveSite: "Demo",
       liveUrl: "https://theglasshut.web.app/",
-      title: "The Glass Hut – Сайт для стеклянного домика",
-      client: "Демо-проект",
+      title: "The Glass Hut – Веб-сайт для Кабины",
+      client: "Личный проект",
       type: "web-development",
       category: "Веб-разработка",
       description:
-        "Современный одностраничный сайт для глэмпинг-домика, расположенного в живописной природной местности. Сайт предоставляет информацию о домике, окрестностях, бронировании и часто задаваемых вопросах, оформлен в минималистичном и стильном дизайне.",
+        "Современный промо-сайт для стеклянной кабины с природным глэмпинг-опытом. Одностраничный дизайн включает информацию о кабине, окрестностях, форму бронирования и FAQ.",
       challenge:
-        "Клиент хотел визуально привлекательный и минималистичный сайт, который бы передавал атмосферу отдыха на природе и позволял пользователю легко находить нужную информацию.",
+        "Клиент хотел сайт, дружелюбный к природе, простой, но визуально насыщенный для продвижения кабины и удобного доступа к информации.",
       solution:
-        "Я создал одностраничное приложение на React и разместил его через Firebase Hosting. Разделы The Hut, The Area, Booking, About Us и FAQ делают навигацию простой. Анимации и полноэкранные изображения передают ощущение спокойствия и уюта.",
+        "Создано одностраничное React-приложение и размещено на Firebase Hosting. Разделы: The Hut, The Area, Booking, About Us, FAQ. Анимации и полноэкранные изображения создают спокойную атмосферу.",
       technologies: [
         "React",
         "React Router",
@@ -596,14 +727,14 @@ export const portfolioData: Record<string, Project[]> = {
         "Firebase Hosting",
       ],
       results: [
-        "Современный сайт, отражающий философию бренда",
-        "Улучшена навигация и адаптивность для мобильных устройств",
-        "Увеличилось среднее время пребывания пользователей на сайте",
+        "Создан чистый и привлекательный веб-сайт, соответствующий духу бренда",
+        "Мобильная версия и четкая навигация улучшили UX",
+        "Увеличено время пребывания посетителей на сайте",
       ],
       testimonial: {
         content:
-          "Наш сайт получился именно таким, как мы хотели — стильный, простой и гармонирующий с природой. Гостям стало гораздо проще получать информацию и бронировать домик.",
-        author: "Концептуальный отзыв",
+          "Наш сайт получился таким, каким мы его представляли: чистый, стильный и соответствующий природе. Гости теперь легко получают информацию, а процесс бронирования стал прозрачнее.",
+        author: "Концептуальная обратная связь",
         company: "Внутренний обзор",
       },
       images: [
@@ -611,38 +742,47 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/glasshut_screens__.webp",
         "/images/projects/glasshutscreens_.webp",
       ],
+      seoTitle: "The Glass Hut – Веб-сайт Glamping Кабины | Bravix Creative",
+      seoDescription:
+        "Одностраничный промо-сайт для стеклянной кабины с глэмпинг-опытом. Легкая бронирование и доступ к информации.",
+      keywords: [
+        "glamping сайт",
+        "сайт кабины",
+        "одностраничный сайт",
+        "react проект",
+      ],
     },
     {
       id: "1004",
-      slug: "celevaya-stranica-prilozheniya-dlya-meditacii",
-      viewLiveSite: "Демо",
-      liveUrl: "https://zenmind-breathe.netlify.app/",
-      title: "Целевая страница приложения для медитации",
-      client: "Демо-проект",
+      slug: "mindfulness-prilozhenie-landing-page",
+      viewLiveSite: "Demo",
+      liveUrl: "https://theglasshut.web.app/",
+      title: "Лэндинг Mindfulness Приложения",
+      client: "Личный проект",
       type: "web-design",
-      category: "Дизайн лендинга",
+      category: "Дизайн лэндинга",
       description:
-        "Одностраничный, адаптивный и визуально спокойный сайт, созданный для продвижения мобильного приложения ZenMind. Дизайн отражает суть осознанности и дыхательных практик, обеспечивая комфортное восприятие на всех устройствах.",
+        "Одностраничный, спокойный и адаптивный сайт для продвижения мобильного приложения ZenMind. Используются спокойные цвета, типографика и интерактивные элементы для удобного пользовательского опыта.",
       challenge:
-        "Клиенту нужен был сайт, визуально передающий спокойствие и медитативную атмосферу ZenMind, быстро загружающийся и удобный для мобильных пользователей. Основная задача — реализовать анимацию дыхания, создающую эффект присутствия.",
+        "Клиент хотел быстрый, мобильный и спокойный сайт, отражающий природу приложения. Основная задача: передать ощущение mindfulness через анимации дыхания.",
       solution:
-        "Я разработал современную адаптивную целевую страницу с использованием React и Tailwind CSS. Анимация 'вдох / выдох' была реализована с помощью пользовательских motion-компонентов. Страница включает демонстрацию приложения, отзывы пользователей, блок с ценами и четкие призывы к действию. Все элементы оформлены с мягкими переходами и пространством, подчеркивающим спокойствие.",
+        "Создан адаптивный лендинг с React и Tailwind CSS. Анимация 'Вдох / Выдох' реализована с помощью пользовательских motion компонентов. Разделы: промо приложения, отзывы, цены и CTA. Белое пространство и плавные переходы создают спокойный UX.",
       technologies: [
         "React",
         "Tailwind CSS",
         "Framer Motion",
-        "Адаптивный веб-дизайн",
-        "Lottie-анимация",
+        "Адаптивный дизайн",
+        "Lottie Animation",
       ],
       results: [
-        "Рост мобильных конверсий на 45%",
-        "Пользователи высоко оценили UI/UX",
-        "Увеличение загрузок приложения благодаря четким CTA",
+        "Мобильная конверсия увеличилась на 45%",
+        "UI/UX дизайн высоко оценили ранние пользователи",
+        "Четкий CTA повысил загрузки приложения",
       ],
       testimonial: {
         content:
-          "Новый сайт ощущается точно так же, как и наше приложение: минимализм, спокойствие и вдохновение. Он идеально передаёт голос нашего бренда и вызывает доверие у посетителей.",
-        author: "Концептуальный отзыв",
+          "Лэндинг точно передает ощущение приложения: спокойный, простой и вдохновляющий. Полностью соответствует голосу нашего бренда.",
+        author: "Концептуальная обратная связь",
         company: "Внутренний обзор",
       },
       images: [
@@ -650,22 +790,31 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/zenmind_instagram.webp",
         "/images/projects/zenmind_laptop.png",
       ],
+      seoTitle: "Лэндинг Mindfulness Приложения | Bravix Creative",
+      seoDescription:
+        "Одностраничный лендинг ZenMind с спокойным дизайном, интерактивной анимацией дыхания и мобильной адаптивностью.",
+      keywords: [
+        "mindfulness сайт",
+        "ZenMind лэндинг",
+        "landing page",
+        "react проект",
+      ],
     },
     {
       id: "1005",
-      slug: "panel-upravleniya-creator-flow-ui",
-      title: "Панель управления Creator Flow UI",
-      viewLiveSite: "Демо",
+      slug: "creative-flow-dashboard",
+      viewLiveSite: "Demo",
       liveUrl: "https://creator-flow-dashboard.netlify.app/",
-      client: "Демо-проект",
-      type: "Панель интерфейса (UI/UX)",
-      category: "Панель управления",
+      title: "Интерфейс Creative Flow Dashboard",
+      client: "Личный проект",
+      type: "ui-ux",
+      category: "Дашборд UI/UX",
       description:
-        "Современный, адаптивный интерфейс панели управления, разработанный для оптимизации рабочего процесса креативных специалистов. Интерфейс сосредоточен на удобстве использования, ясности и визуальном балансе, предлагая эффективное пространство для управления задачами, доходами, контентом и аналитикой.",
+        "Современный, адаптивный интерфейс дашборда для упрощения рабочих процессов создателей контента. Сосредоточен на удобстве, ясности и эстетическом балансе для управления задачами, доходами, контентом и аналитикой.",
       challenge:
-        "Цель заключалась в создании визуально привлекательного и функционального интерфейса, который креаторы могли бы использовать ежедневно. Основной вызов — достичь баланса между плотностью данных и чистым, увлекательным дизайном, особенно на мобильных и настольных устройствах.",
+        "Цель: создать визуально привлекательный и функциональный дашборд для ежедневного использования. Основная задача: баланс визуальной ясности и плотности данных на мобильных и десктопных устройствах.",
       solution:
-        "Используя Figma для прототипирования, я разработал гибкую панель с модульными компонентами. Ключевые элементы, такие как графики доходов, недавняя активность, быстрые действия и навигация, были организованы с учетом интуитивного UX. Цветовая палитра и интервалы подобраны так, чтобы обеспечить фокус и спокойствие при длительном использовании.",
+        "Использован Figma для wireframe и прототипов. Создан интуитивный UX с графиками доходов, последними действиями, быстрыми действиями и навигацией. Цветовые темы и отступы оптимизированы для фокуса и спокойствия при длительном использовании.",
       technologies: [
         "Figma",
         "React",
@@ -674,14 +823,14 @@ export const portfolioData: Record<string, Project[]> = {
         "Визуализация данных",
       ],
       results: [
-        "Эффективный пользовательский поток с минимальной когнитивной нагрузкой",
-        "Высокоадаптивная система компонентов для масштабирования",
-        "Положительные отзывы от креативных профессионалов о визуальном стиле и удобстве",
+        "Эффективный рабочий процесс с минимальной нагрузкой на мозг",
+        "Высокоадаптируемая система компонентов для расширения",
+        "Положительные отзывы от профессионалов о дизайне и удобстве",
       ],
       testimonial: {
         content:
-          "Этот дизайн панели идеально сочетает функциональность и визуальную ясность. Это именно тот инструмент, которым я хотел бы пользоваться каждый день как креатор.",
-        author: "Концептуальный отзыв",
+          "Этот дашборд идеально балансирует функциональность и визуальную ясность. Как создатель контента, я бы хотел использовать его каждый день.",
+        author: "Концептуальная обратная связь",
         company: "Внутренний обзор",
       },
       images: [
@@ -689,42 +838,51 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/dashboard_2.webp",
         "/images/projects/dashboard_1.webp",
       ],
+      seoTitle: "Интерфейс Creative Flow Dashboard | Bravix Creative",
+      seoDescription:
+        "Современный, адаптивный, эстетичный UI/UX дашборд для создателей контента. Оптимизирован для управления задачами, доходами, контентом и аналитикой.",
+      keywords: [
+        "ui/ux дашборд",
+        "creative flow",
+        "интерфейс дашборда",
+        "react проект",
+      ],
     },
     {
       id: "1006",
-      slug: "sayt-fastfud-restorana",
-      viewLiveSite: "Сайт вживую",
+      slug: "fast-food-restaurant-website",
+      viewLiveSite: "Живой сайт",
       liveUrl: "https://quick-bite-fastfood.netlify.app/",
-      title: "Сайт фастфуд-ресторана",
-      client: "Демо-проект",
+      title: "Веб-сайт Fast Food ресторана",
+      client: "Личный проект",
       type: "web-application",
-      category: "Веб-дизайн + Электронная коммерция",
+      category: "Веб-дизайн + E-commerce",
       description:
-        "Quick Bite — это сайт фастфуд-ресторана, разработанный для полного онлайн-опыта заказа. Посетители могут просматривать современное адаптивное меню, добавлять товары в корзину, безопасно оплачивать и отслеживать свои заказы в реальном времени — всё в одном удобном интерфейсе.",
+        "Quick Bite предлагает полный онлайн-заказ для ресторана быстрого питания. Посетители могут просматривать адаптивное меню, добавлять товары в корзину, безопасно оплачивать и отслеживать заказы в реальном времени.",
       challenge:
-        "Цель заключалась в создании визуально привлекательной и удобной цифровой платформы, заменяющей традиционные методы заказа полностью интегрированной системой онлайн-заказов, оплаты и отслеживания доставки — для улучшения клиентского опыта и внутренней эффективности.",
+        "Цель: заменить традиционные методы заказа полностью интегрированной системой онлайн-заказа, оплаты и отслеживания доставки для улучшения опыта клиента и внутренней эффективности.",
       solution:
-        "С использованием React и современных методов веб-разработки я создал адаптивную и интерактивную платформу для заказа еды. Основные функции включают динамическую корзину, интеграцию оплаты и панель отслеживания заказов в реальном времени.",
+        "Создана интерактивная платформа для заказов с использованием React. Основные функции: динамическая корзина, интеграция платежей, дашборд для отслеживания заказов в реальном времени.",
       adminPanel: {
         title: "Панель администратора",
         content:
-          "Для упрощения работы персонала я разработал легкую панель администратора. Сотрудники могут отслеживать и управлять входящими заказами, обновлять их статус (например, 'Готовится', 'В пути', 'Доставлен') и безопасно просматривать информацию о клиентах и платежах. Это упрощает рабочий процесс и обеспечивает прозрачность в режиме реального времени, снижая необходимость в ручной координации.",
+          "Легкая панель позволяет сотрудникам отслеживать поступающие заказы, обновлять статус ('Готовится', 'В пути', 'Доставлено') и безопасно получать информацию о клиенте/платежах. Обеспечивает мгновенную видимость процесса заказов и повышает эффективность.",
       },
       technologies: [
         "React",
         "Tailwind CSS",
         "JavaScript",
-        "API оплаты",
+        "Payment API",
         "Local Storage",
       ],
       results: [
-        "Обеспечена безопасная онлайн-оплата и отслеживание доставки в реальном времени",
-        "Улучшено управление заказами с помощью панели администратора",
-        "Повышена удовлетворенность клиентов благодаря адаптивному интерфейсу",
+        "Безопасная онлайн-оплата и отслеживание доставки в реальном времени",
+        "Повышена эффективность управления заказами через панель администратора",
+        "Мобильная адаптация улучшила удовлетворенность клиентов",
       ],
       testimonial: {
         content:
-          "Нашим клиентам очень нравится удобство онлайн-заказа и оплаты. Функция отслеживания заказов также сократила количество телефонных обращений и улучшила наш рабочий процесс.",
+          "Наши клиенты любят удобство онлайн-заказа и оплаты. Функция отслеживания заказов сократила звонки и улучшила рабочий процесс.",
         author: "Менеджер ресторана",
         company: "Quick Bite",
       },
@@ -732,6 +890,15 @@ export const portfolioData: Record<string, Project[]> = {
         "/images/projects/quickbite.webp",
         "/images/projects/QB_menu.webp",
         "/images/projects/menu-page.webp",
+      ],
+      seoTitle: "Веб-сайт Fast Food ресторана | Bravix Creative",
+      seoDescription:
+        "Современный и интерактивный веб-сайт для Quick Bite. Оптимизирован для онлайн-заказа, оплаты и отслеживания заказов.",
+      keywords: [
+        "fast food сайт",
+        "онлайн-заказ",
+        "панель ресторана",
+        "react проект",
       ],
     },
   ],
